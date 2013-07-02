@@ -204,6 +204,7 @@ KUVA
 \begin{tehtavasivu}
 
 \subsubsection*{Opi perusteet}
+
 \begin{tehtava}
 Määritä suoran ja ympyrän leikkauspisteet, jos suoran yhtälö, ja ympyrän keskipiste ja säde ovat
 \begin{alakohdat}
@@ -224,19 +225,15 @@ vastaavasti.
 \end{tehtava}
 
 \begin{tehtava}
-Suoran ulkopuolisesta pisteestä $P$ piirrettyjen tangenttien ja ympyrän sivuamispisteet voidaan määrittää myös klassiseen tyyliin Thaleen lausetta hyödyntäen. Voidaan osoittaa, että jos $M$ on pisteiden $P$ ja ympyrän keskipisteen $O$ keskipiste, $M$-keskinen ympyrä, joka kulkee pisteiden $P$ ja $O$ kautta leikkaa alkuperäistä ympyrää halutuissa sivuamispisteissä.
-
-\begin{alakohdat}
-\alakohta{Jos $P = (0,0)$, $O = (6,4)$ ympyrän säde on $5$, määritä sivuamispisteet.}
-\alakohta{Määritä vastaavien tangenttien yhtälöt}
-\end{alakohdat}
+Määritä kaikki ympyröiden $ (x-3)^2+y^2= 10$, $(x+1)^2+(y-3)^2 = 18$ sekä $x-6)^2+(y-2)^2 = 8$ leikkauspisteet (pareittain).
 \begin{vastaus}
-\begin{alakohdat}
-\alakohta{$(\frac{81-30\sqrt{3}}{26},\frac{54+45\sqrt{3}}{26})$ ja $(\frac{81+30\sqrt{3}}{26},\frac{54-45\sqrt{3}}{26})$}
-\alakohta{$(27-10\sqrt{3})y-(18+15\sqrt{3})x = 0$ ja $(27+10\sqrt{3})y-(18-15\sqrt{3})x = 0$}
-\end{alakohdat}
+$(\frac{82-9\sqrt{79}}{50},-3\frac{4\sqrt{79}-17}{50})$, $(\frac{82+9\sqrt{79}}{50},3\frac{4\sqrt{79}+17}{50})$,
+$(\frac{123-2\sqrt{295}}{26}, 3\frac{10+\sqrt{295}}{26})$
+$(\frac{123+2\sqrt{295}}{26}, 3\frac{10-\sqrt{295}}{26})$
+$(\frac{16}{5}, \frac{12}{5})$
 \end{vastaus}
 \end{tehtava}
+
 
 \subsubsection*{Hallitse kokonaisuus}
 \begin{tehtava}
@@ -299,6 +296,27 @@ Tangenttien yhtälöt ovat $ y = \pm \sqrt{a^2-1}x+a$
 \subsubsection*{Sekalaisia tehtäviä}
 
 \begin{tehtava}
+Suoran ulkopuolisesta pisteestä $P$ piirrettyjen tangenttien ja ympyrän sivuamispisteet voidaan määrittää myös monella muulla tavalla:
+
+Pisteen etäisyys suorasta -kaavalla: Jos suora on ympyrän tangentti, sen etäisyyden suorasta on oltava yhtä suuri kuin ympyrän säde.
+
+Määrittämällä tangenttien pituudet: Koska tangentit ja ympyrän säde ovat kohtisuorassa, tangentien pituus voidaan määrittää ympyrän keskipisteen, pisteen $P$ ja sivuamispisteen muodostamasta suorakulmaisesta kolmiosta. Nyt sivuamispisteet voidaan määrittää kahden ympyrän leikkauspisteinä.
+
+Klassiseen tyyliin Thaleen lausetta hyödyntäen: Voidaan osoittaa, että jos $M$ on pisteiden $P$ ja ympyrän keskipisteen $O$ keskipiste, $M$-keskinen ympyrä, joka kulkee pisteiden $P$ ja $O$ kautta leikkaa alkuperäistä ympyrää halutuissa sivuamispisteissä.
+
+\begin{alakohdat}
+\alakohta{Jos $P = (0,0)$, $O = (6,4)$ ympyrän säde on $5$, määritä sivuamispisteet näillä kolmella tavalla.}
+\alakohta{Määritä vastaavien tangenttien yhtälöt}
+\end{alakohdat}
+\begin{vastaus}
+\begin{alakohdat}
+\alakohta{$(\frac{81-30\sqrt{3}}{26},\frac{54+45\sqrt{3}}{26})$ ja $(\frac{81+30\sqrt{3}}{26},\frac{54-45\sqrt{3}}{26})$}
+\alakohta{$(27-10\sqrt{3})y-(18+15\sqrt{3})x = 0$ ja $(27+10\sqrt{3})y-(18-15\sqrt{3})x = 0$}
+\end{alakohdat}
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
 Kaksi ympyrää leikkaa kohtisuorasti, jos ne leikkaavat, ja niiden leikkauspisteisiin piirretyt tangentit ovat kohtisuorassa. Leikkaavatko ympyrät kohtisuorasti
 \begin{alakohdat}
 \alakohta{$(x+3)^2+(y+3)^2= 13$ ja $(x+2)^2+(y-1)^2 = 5 $}
@@ -322,9 +340,15 @@ $\frac{2\sqrt{41}\pi}{\sqrt{4\pi^2+1}}$
 \end{tehtava}
 
 \begin{tehtava}
-Todista analyyttisen geometrian keinoin, että ympyrälle piirretty tangentti ja tangentin sivuamispisteeseen piirretty säde ovat kohtisuorassa.
+Todista analyyttisen geometrian keinoin tangenttien tärkeät perusominaisuudet
+\begin{alakohdat}
+\alakohta{Ympyrälle piirretty tangentti ja tangentin sivuamispisteeseen piirretty säde ovat kohtisuorassa.}
+\alakohta{Tangentit ovat säteen etäisyydellä ympyrän keskipisteestä.}
+\alakohta{Suoran ulkopuolisesta pisteestä piirretyt kaksi tangenttia ovat yhtä pitkiä.}
+\end{alakohdat}
+Vinkki: Yleisyyttä menettämättä voidaan ympyrä asettaa origokeskiseksi ja yksisäteiseksi, ja tangentti valita kulkemaan sopivan pisteen kautta.
 \begin{vastaus}
-Vinkki: Yleisyyttä menettämättä voidaan ympyrä asettaa origokeskiseksi ja yksisäteiseksi. Käytä tehtävän ? tulosta ja kohtisuoruusehtoa.
+Vinkki on hyvä
 \end{vastaus}
 \end{tehtava}
 TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
