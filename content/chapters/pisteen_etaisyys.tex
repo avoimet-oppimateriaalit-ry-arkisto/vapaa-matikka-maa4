@@ -62,10 +62,10 @@ Selvitetään pisteen $P=(8, 5)$ etäisyys suorasta $l$.
 %    kuvaaja.piirra(".75*x-3", nimi = "$3x -4y- 12=0$", kohta = 2, suunta = -45)    
 
 
-Kuvaan on merkitty suorakulmaiset kolmiot $OAB$ ja $PQR$.
-Etäisyys, jonka haluamme selvittää, on kolmion $PQR$ sivun $r$ pituus.
-Tehtävä ratkeaa, kun huomataan, että kolmiot $OAB$ ja $PQR$ ovat yhdenmuotoisia.
-Tämä johtuu siitä, että molemmat ovat suorakulmaisia ja lisäksi kulmat $OAB$ ja $PRQ$ ovat samankokoiset (ks. kuva alla).
+Kuvaan on merkitty suorakulmaiset kolmiot $ABO$ ja $PRQ$: $PQ$ on suoralle $l$ piirretty normaali ($Q$ suoralla), $A$ ja $B$ ovat suoran $l$ ja $x$- ja $y$-akselin leikkauspisteet, vastaavasti, $O$ origo, ja $R$ on suoralla $l$ siten, että $PR$ on $y$-akselin suuntainen.
+Etäisyys, jonka haluamme selvittää, on kolmion $PQR$ sivun $PQ$ pituus.
+Tehtävä ratkeaa, kun huomataan, että kolmiot $ABO$ ja $PRQ$ ovat yhdenmuotoisia.
+Tämä johtuu siitä, että molemmat ovat suorakulmaisia ja lisäksi kulmat $ABO$ ja $PRQ$ ovat samankohtaisina yhtä suuret (ks. kuva alla).
 
 [EI OLE VALMIS, KUVIA JA TEKSTISELITYSTÄ VOISI VIELÄ MIETTIÄ]
 
@@ -93,16 +93,16 @@ Pisteen $A$ koordinaatit ovat siis $(4, 0)$. Toisaalta kun $x=0$, saadaan
 \[
 3\cdot 0-4\cdot y=12, \quad \text{josta} \quad y=-\frac{12}{4}=-3.
 \]
-Pisteen $B$ koordinaatit ovat siis $(0, 3)$. Nyt tunnetaan sivut $a=4$ ja $b=3$, ja lisäksi Pythagoraan lauseen perusteella
+Pisteen $B$ koordinaatit ovat siis $(0, 3)$. Nyt tunnetaan sivut $OB=4$ ja $OA=3$, ja lisäksi Pythagoraan lauseen perusteella
 \[
-c=\sqrt{a^2+b^2}=\sqrt{4^2+3^2}=\sqrt{25}=5.
+AB=\sqrt{OA^2+OB^2}=\sqrt{4^2+3^2}=\sqrt{25}=5.
 \]
 
 Koska kolmiot $OAB$ ja $PQR$ ovat yhdenmuotoiset, saadaan verranto
 \[
-\frac{r}{q}=\frac{a}{c}.
+\frac{PQ}{PR}=\frac{OB}{AB}.
 \]
-Tunnemme jo sivut $a$ ja $c$, joten enää on selvitettävä sivu $q$. Tämä on sama kuin pisteiden $P$ ja $R$ välinen etäisyys.
+Tunnemme jo sivut $OB$ ja $AB$, joten enää on selvitettävä sivu $PR$. Tämä on sama kuin pisteiden $P$ ja $R$ välinen etäisyys.
 
 Pisteen $R$ $x$-koordinaatti on sama kuin pisteen $P$, eli 8. Koska $R$ on suoralla $l$, sen $y$-koordinaatti saadaan suoran yhtälöstä:
 \begin{align*}
@@ -113,29 +113,29 @@ y & =3. \\
 \end{align*}
 Nyt siis $R=(8, 3)$. Pisteiden $P$ ja $R$ välinen etäisyys on siis $5-3=2$, ja tämä on sivun $q$ pituus.
 
-Kun verrantoon $\dfrac{r}{q}=\dfrac{a}{c}$ sijoitetaan tunnetut sivujen pituudet, saadaan
+Kun verrantoon $\frac{PQ}{PR}=\frac{OB}{AB}$ sijoitetaan tunnetut sivujen pituudet, saadaan
 \begin{align*}
-\frac{r}{2} & =\frac{4}{5} \quad \ppalkki \cdot 2 \\[3pt]
-r & =\frac{8}{5}.
+\frac{PQ}{2} & =\frac{4}{5} \quad \ppalkki \cdot 2 \\[3pt]
+PQ & =\frac{8}{5}.
 \end{align*}
 Siispä pisteen $P$ etäisyys suorasta $l$ on $\dfrac{8}{5}$.
 
 \subsection*{Pisteen etäisyys suorasta kaavan avulla}
 
 Edellä esitetystä tavasta laskea pisteen etäisyys suorasta voidaan johtaa myös kaava.
-Jos suoran yhtälö on annettu normaalimuodossa $Ax+By+C=0$ ja pisteen koordinaatit ovat $(x_0, y_0)$, etäisyys $d$ saadaan seuraavasta kaavasta.
+Jos suoran yhtälö on annettu normaalimuodossa $ax+by+c=0$ ja pisteen koordinaatit ovat $(x_0, y_0)$, etäisyys $d$ saadaan seuraavasta kaavasta.
 \laatikko[Pisteen etäisyys suorasta]{
 \[
-d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}
+d=\frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}
 \]
 }
 Kaavan johtaminen esitetään liitteessä. (VAI TÄSSÄ?)
 
 \begin{esimerkki} Lasketaan aiemman esimerkin pisteen $P=(8, 5)$ etäisyys suorasta $l$, jonka normaalimuotoinen yhtälö on $3x-4y-12=0$.
 \begin{esimratk}
-Käytetään kaavaa, jolloin $A=3$, $B=-4$ ja $C=12$, sekä $x_0=8$ ja $y_0=5$. Kaavan mukaan etäisyys on
+Käytetään kaavaa, jolloin $a=3$, $b=-4$ ja $c=12$, sekä $x_0=8$ ja $y_0=5$. Kaavan mukaan etäisyys on
 \[
-d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}
+d=\frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}
 =\frac{|3\cdot 8-4\cdot 5-12|}{\sqrt{3^2+(-4)^2}}
 =\frac{|24-20-12|}{\sqrt{9+16}}=\frac{|-8|}{\sqrt{25}}
 =\frac{8}{5}.
