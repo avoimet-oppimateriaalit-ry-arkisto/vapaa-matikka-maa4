@@ -20,9 +20,11 @@
 *.nav
 *.nlo
 *.out
+*.pdf
 *.pdfsync
 *.pgf-plot.*
 *.ps
+*.pyc
 *.snm
 *.sty.backup
 *.synctex.gz
@@ -30,10 +32,8 @@
 *.tex.backup
 *.toc
 *.vrb
-*.pyc
 *~
 .DS_Store
-content/*.pdf
-content/appendices/vastaukset.tex
-content/revision.tex
-content/kuva-tmp-*
+kuva-tmp-*
+revision.tex
+content/LIITE_vastaukset.tex
