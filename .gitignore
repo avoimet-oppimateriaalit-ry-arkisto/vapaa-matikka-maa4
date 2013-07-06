@@ -1,6 +1,7 @@
 *.aux
 *.bbl
 *.blg
+*.dep
 *.dvi
 *.fdb_latexmk
 *.glg
@@ -15,6 +16,7 @@
 *.log
 *.lot
 *.maf
+*.md5
 *.mtc
 *.mtc0
 *.nav
