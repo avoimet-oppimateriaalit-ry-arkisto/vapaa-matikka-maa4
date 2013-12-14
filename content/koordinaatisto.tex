@@ -157,13 +157,20 @@ Ympyrän yhtälö muodostetaan vaatimuksesta, että jokainen ympyrän piste on y
 Tällöin tulee käyttöön edellä opittu kahden pisteen etäisyyden kaava.
 Esimerkiksi alla olevassa kuvassa on piirretty ympyrä, jonka yhtälö on $(x-1)^2+(y-2)^2=4$.
 
-[TÄHÄN YMPYRÄ]
+\begin{kuva}
+	kuvaaja.pohja(-4, 6, -3, 7, leveys=7)
+	geom.ympyra((1, 2), 2, nimi="$(x-1)^2+(y-2)^2=4$")
+\end{kuva}
 
 Yllä olevasta ympyrän yhtälöstä nähdään, että käyrien yhtälöt eivät ole välttämättä muotoa $y=f(x)$.
 Toinen esimerkki on niin sanottu Cartesiuksen lehti, jonka yhtälö on $x^3+y^3-3xy=0$.
 Kartesiuksen lehti on piirretty alla olevaan kuvaan.
 
-[TÄHÄN CARTESIUKSEN LEHTI]
+\begin{kuva}
+	kuvaaja.pohja(-2, 3, -2, 3, leveys=7)
+	kuvaaja.piirraParametri("(3*t)/(1+t**3)", "(3*t**2)/(1+t**3)", -15, 15)
+\end{kuva}
+
 
 Esimerkiksi piste $(3/2, 3/2)$ on käyrällä, sillä
 \[
