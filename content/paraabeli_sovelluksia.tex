@@ -6,11 +6,70 @@ KIRJOITA TÄHÄN LUKUUN
 \begin{itemize}
 \item paraabelin huippu on kohdassa $x=-b/2a$, todistus
 \item paraabelin yhtälön huippumuoto $y-y_0=a(x-x_0)^2$
-\item paraabelin yhtälön ratkaiseminen kolmen pisteen avulla
+\item TEHTY paraabelin yhtälön ratkaiseminen kolmen pisteen avulla
 \item soveltavia tehtäviä, ne iänikuiset holvikaaret jne.
 \end{itemize}
-
 KIITOS!}
+
+
+
+\begin{esimerkki}
+	Paraabeli kulkee pisteiden $(0,1)$, $(2,0)$ ja $(4,1)$ kautta. Muodosta paraabelin yhtälö.
+	
+	\begin{esimratk} 
+		Annetujen pisteiden koordinaatit kannattaa sijoittaa paraabelin yhtälöön, ja muodostaa kolmen pisteen muodostamista yhtälöistä yhtälöryhmä:
+\[
+\left\{
+\begin{aligned}
+1 - y_0 = k(0 - x_0)^2 \\
+0 - y_0 = k(2 - x_0)^2 \\
+1 - y_0 = k(4 - x_0)^2
+\end{aligned}
+\right.
+\]
+
+		Yhtälöryhmä ratkaistaan samalla lailla kuten aiemminkin.
+		
+		Ratkaise $y_0$ ensimmäisestä yhtälöstä ja sijoita se kolmanteen.
+
+
+\begin{align*}
+	1 - y_0 = k(0 - x_0)^2 && \Leftrightarrow y_0 = 1- kx^2_0  \\
+	1-y_0=k(4-x_0)^2 && \text{Avataan binomin neliö ja sijoitetaan }y_0 \\
+	1-1+kx^2_0 = 16k - 8kx_0 + x^2_0 && -kx^2_0 \\
+	-8kx_0 + 16k = 0 && \cdot \frac{1}{8k}, k \neq 0 \\
+	x_0 = 2 \\
+	y_0 = 1 - 4k	
+\end{align*}	
+
+		 Sijoitetaan saadut $x_0$:n ja $y_0$:n arvot keskimmäiseen yhtälöön.
+
+\begin{align*}	
+	0 - y_0 = k(2 - x_0)^2 \\
+	0 - (1 - 4k) = k(2-2)^0 \\
+	k = \frac{1}{4} \\
+	y = 0
+\end{align*}
+
+		Sijoitetaan lopulliset arvot paraabelin yhtälöön:
+
+\begin{align*}	
+	y - 0 = \frac{1}{4}(x-2)^2 \\
+	y = \frac{1}{4}(x^2-4x+4) \\
+	y = \frac{1}{4}x^2 - x + 1
+\end{align*}
+
+
+		\begin{esimvast}
+			$y=\frac{1}{4}x^2 - x + 1$
+		\end{esimvast}
+
+
+	\end{esimratk}
+\end{esimerkki}
+
+
+
 
 \begin{tehtavasivu}
 
