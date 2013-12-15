@@ -4,10 +4,10 @@
 KIRJOITA TÄHÄN LUKUUN
 
 \begin{itemize}
-\item ympyrän ja suoran leikkauspisteiden ratkaiseminen
-\item ympyrän tangetin määrittäminen sekä kehällä olevan (kohtisuorassa sädettä vastaan) että
+\item TEHTY - ympyrän ja suoran leikkauspisteiden ratkaiseminen 
+\item TEHTY ympyrän tangetin määrittäminen sekä kehällä olevan (kohtisuorassa sädettä vastaan) että
 sen ulkopuolisen pisteen kautta (kaksi tapaa: pisteen etäisyys suorasta -kaava tai diskriminantti = 0)
-\item kahden ympyrän leikkauspisteiden ratkaiseminen yhtälöparilla
+\item TEHTY kahden ympyrän leikkauspisteiden ratkaiseminen yhtälöparilla
 \end{itemize}
 
 KIITOS!}
@@ -52,7 +52,12 @@ x = 1 \vee x = \frac{13}{5}
 \end{align*}
 eli saatiin 2 ratkaisua: $(x, y) = (1, 1)$ ja $(x, y) = (\frac{13}{5}, \frac{1}{5})$. Tarkistamalla on hyvä vielä todeta, että pisteet todella ovat leikkauspisteitä.
 
-Tähän kuva tilanteesta.
+\begin{kuva}
+    kuvaaja.pohja(-3, 5, -4, 4, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirraParametri("2*cos(t)+1","2*sin(t)-1", a = 0, b = 2*pi)
+    kuvaaja.piirra("(-x+3)/2")
+	
+\end{kuva}
 \begin{esimvast}
 Leikkauspisteet ovat $(1, 1)$ ja $(\frac{13}{5}, \frac{1}{5})$.
 \end{esimvast}
