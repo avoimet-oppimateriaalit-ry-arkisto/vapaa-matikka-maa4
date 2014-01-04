@@ -4,20 +4,46 @@
 KIRJOITA TÄHÄN LUKUUN
 
 \begin{itemize}
-\item paraabelin huippu on kohdassa $x=-b/2a$, todistus
-\item paraabelin yhtälön huippumuoto $y-y_0=a(x-x_0)^2$
+\item TEHTY paraabelin huippu on kohdassa $x=-b/2a$, todistus
+\item (Jo edellisessä kappaleessa? Vai pitäisikö siirtää tähän?) paraabelin yhtälön huippumuoto $y-y_0=a(x-x_0)^2$
 \item TEHTY paraabelin yhtälön ratkaiseminen kolmen pisteen avulla
 \item soveltavia tehtäviä, ne iänikuiset holvikaaret jne.
 \end{itemize}
 KIITOS!}
 
+\subsection{Paraabelin huipun sijainti}
+Joissain tehtävissä hyödylliseksi osoittautuu tulos, että paraabelin $y = ax^2 +b +c$ huipun $(x_0, y_0)$ $x$-koordinaatti on aina
+\[x_0 = - \frac{b}{2a}\]
+ja $y$-koordinaatti
+\[y_0 = c - \frac{b^2}{4a}.\]
 
+%%% FIXME MAA2:n liitteistä toteamus että x= \frac{-b}{2a} on neliön minimi tjsp tähän?
+
+Huipun sijainnin kohdassa $x = - \frac{b}{2a}$ voi osoittaa tutkimalla paraabelin määräävän polynomifunktion ääriarvoja funktion derivaatan avulla; derivaattaan tutustutaan kurssilla MAA7. Saman tuloksen näkee myös paraabelin yhtälön huippumuodon $y - y_0 = a(x- x_0)^2$ ja normaalimuodon $y = ax^2 +bx +c$ yhtäpitävyydestä. Palautetaan edellisestä kappaleesta mieleen, että huippumuodon saattaa kirjoittaa auki
+
+\begin{align*}
+y-y_0 &= a(x-x_0)^2 \\
+y-y_0 &= a(x^2 - 2x_0x + x_0^2) \\
+y &= ax^2 - 2ax_0 x + ax_0^2 +y_0.
+\end{align*}
+Nyt
+\[ax^2 - 2ax_0 x + ax_0^2 +y_0 = ax^2 +bx +c\]
+kun $b = -2ax_0$ ja $c = ax_0^2 +y_0$, ja siis
+\[x_0 = -\frac{b}{2a}\]
+ja sijoittamalla tämä saadaan myös $y_0$
+\begin{align*}
+y_0 &= c - ax_0^2 = c -a\left(-\frac{b}{2a}\right)^2 \\
+&= c - \frac{ab^2}{4a^2} \\
+&= c - \frac{b^2}{4a}.
+\end{align*}
+
+\subsection{Paraabelin yhtälön ratkaiseminen kolmen pisteen avulla}
 
 \begin{esimerkki}
 	Paraabeli kulkee pisteiden $(0,1)$, $(2,0)$ ja $(4,1)$ kautta. Muodosta paraabelin yhtälö.
 	
 	\begin{esimratk} 
-		Jokainen annettu piste toteuttaa saman paraabelin yhtälön $y - y_0 &= k(x-x_0)^2$. Näin ollen kannattaa sijoittaa kunkin pisteen koordinaatit paraabelin yhtälöön ja muodostaa kolmen pisteen muodostamista yhtälöistä yhtälöryhmä:
+		Jokainen annettu piste toteuttaa saman paraabelin yhtälön $y - y_0 = k(x-x_0)^2$. Näin ollen kannattaa sijoittaa kunkin pisteen koordinaatit paraabelin yhtälöön ja muodostaa kolmen pisteen muodostamista yhtälöistä yhtälöryhmä:
 		\[
 		\left\{
 		\begin{aligned}
