@@ -17,7 +17,7 @@ KIITOS!}
 }
 
 %%%%%%MAA2, luku 3.1 Toisen asteen polynomifunktio
-Kurssilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli. Nämä kuvaajat olivat muotoa (\termi{paraabelin normaalimuoto}{normaalimuotoisia}) $y=ax^2+bx+c$ olevia käyriä, joissa $a$ määräsi paraabelin aukeamissuunnan. Jos $a<0$ paraabeli aukeaa alaspäin ja jos $a>0$ ylöspäin. 
+Kurssilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli. Nämä kuvaajat olivat muotoa $y=ax^2+bx+c$ (\termi{paraabelin normaalimuoto}{normaalimuoto}) olevia käyriä, joissa $a$ määräsi paraabelin aukeamissuunnan. Paraabeli aukeaa alaspäin, jos $a<0$, ja ylöspäin, jos $a>0$. Jos $a=0$, kyseessä ei ole paraabeli.
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
@@ -29,7 +29,7 @@ Kurssilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabel
     kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = 135)
 \end{kuva}
 
-Yksityiskohtaisemman kuvauksen toisen asteen polynomifunktion kuvaajan käyttäytymisestä vakioiden eri arvoilla voi lukea MAA2-kurssin kirjan liitteessä.
+Yksityiskohtaisempi kuvaus toisen asteen polynomifunktion kuvaajan käyttäytymisestä vakioiden eri arvoilla on liitteenä kirjassa Vapaa matikka MAA2: Polynomifunktiot.
 
 \begin{esimerkki}
 Määritä pistejoukon yhtälö, jolla on seuraava ominaisuus: Jokainen pistejoukon piste on yhtä etäällä pisteestä $(0, 3)$ ja suorasta $y=-3$
@@ -83,7 +83,7 @@ y &= ax^2 +bx +c
 \begin{esimerkki}
 	Mitkä ovat paraabelin $y=3x^2-12x+13$ huipun koordinaatit?
 	\begin{esimratk} \textbf{Tapa 1}
-		Paraabelin huipun koordinaatit näkisi suoraan huippumuotoiseksi muutetusta yhtälöstä. Helpompaa lienee kuitenkin muuttaa huippumuotoinen yhtälö $y$:n suhteen ratkaistuksi ja merkitä yhtälöiden kertoimet samoiksi, jolloin saadaan selville $x_0$ ja $y_0$.
+		Paraabelin huipun koordinaatit näkisi suoraan huippumuotoiseksi muutetusta yhtälöstä. Helpompaa on kuitenkin muuttaa huippumuotoinen yhtälö $y$:n suhteen ratkaistuksi ja merkitä yhtälöiden kertoimet samoiksi, jolloin saadaan selville $x_0$ ja $y_0$.
 
 		\begin{align*}
 			y-y_0	&= a(x-x_0)^2 \\
@@ -151,7 +151,7 @@ y -y_0 &= \frac{1}{2(q-r)}(x - x_0)^2 &&\ppalkki \text{Valitaan } a = \frac{1}{2
 y - y_0 &= a(x - x_0)^2
 \end{align*}
 
-Siis saadaan paraabelin huippumuotoinen yhtälö.
+Tämä on paraabelin huippumuotoinen yhtälö.
 
 Huippumuotoisen yhtälön kohdalla totesimme, että $b = -2ax_0$ ja $c = ax_0^2 +y_0$. Tämän voi nähdä myös aikaisemmasta välivaiheesta:
 \begin{align*}
