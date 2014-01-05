@@ -17,7 +17,7 @@ KIITOS!}
 }
 
 %%%%%%MAA2, luku 3.1 Toisen asteen polynomifunktio
-Kussilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli. Nämä kuvaajat olivat muotoa $y=ax^2+bx+c$ olevia käyriä, joissa $a$ määräsi paraabelin aukeamissuunnan. Jos $a<0$ paraabeli aukeaa alaspäin ja jos $a>0$ ylöspäin.
+Kurssilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli. Nämä kuvaajat olivat muotoa (\termi{paraabelin normaalimuoto}{normaalimuotoisia}) $y=ax^2+bx+c$ olevia käyriä, joissa $a$ määräsi paraabelin aukeamissuunnan. Jos $a<0$ paraabeli aukeaa alaspäin ja jos $a>0$ ylöspäin. 
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
@@ -28,6 +28,8 @@ Kussilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
     kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = 135)
 \end{kuva}
+
+Yksityiskohtaisemman kuvauksen toisen asteen polynomifunktion kuvaajan käyttäytymisestä vakioiden eri arvoilla voi lukea MAA2-kurssin kirjan liitteessä.
 
 \begin{esimerkki}
 Määritä pistejoukon yhtälö, jolla on seuraava ominaisuus: Jokainen pistejoukon piste on yhtä etäällä pisteestä $(0, 3)$ ja suorasta $y=-3$
@@ -54,6 +56,7 @@ Pistejoukon yhtälö on $y=\frac{1}{12}x^2$.
 \end{esimratk}
 \end{esimerkki}
 
+
 %%% FIX ME ONKO HUIPPUMUOTOINEN HYVÄ TERMI? %%%%%%%%%%%
 \subsection{Paraabelin huippumuotoinen yhtälö}
 
@@ -65,12 +68,22 @@ y-y_0 = a(x-x_0)^2
 
 Näissä kummassakin muodossa vakio $a$ on sama.
 
-%%%%% FIX ME Mikä on tämän alaluvun suhde MAA1-kirjan liitteenä olevaan alalukuun "Toisen asteen polynomin kuvaaja"
+Yksinkertaisin tapa todeta huippumuotoisen yhtälön todellakin määrittelevän normaalimuotoisen paraabelin on kirjoittaa huippumuotoinen yhtälö auki:
+
+\begin{align*}
+y-y_0 &= a(x-x_0)^2 \\
+y-y_0 &= a(x^2 - 2x_0x + x_0^2) \\
+y &= ax^2 - 2ax_0 x + ax_0^2 +y_0
+\intertext{Merkitään $b = -2ax_0$ ja $c = ax_0^2 +y_0$:}
+y &= ax^2 +bx +c
+\end{align*}
+
+%%%%% FIX ME Mikä on tämän alaluvun suhde MAA2-kirjan liitteenä olevaan alalukuun "Toisen asteen polynomin kuvaaja"
 
 \begin{esimerkki}
 	Mitkä ovat paraabelin $y=3x^2-12x+13$ huipun koordinaatit?
 	\begin{esimratk} \textbf{Tapa 1}
-		Paraabelin huipun koordinaatit näkisi suoraan huippumuotoiseksi muutetusta yhtälöstä. Helpompaa lienee kuitenkin muuttaa huippumuoitoinen yhtälö $y$:n suhteen ratkaistuksi ja merkitä yhtälöiden kertoimet samoiksi, jolloin saadaan selville $x_0$ ja $y_0$.
+		Paraabelin huipun koordinaatit näkisi suoraan huippumuotoiseksi muutetusta yhtälöstä. Helpompaa lienee kuitenkin muuttaa huippumuotoinen yhtälö $y$:n suhteen ratkaistuksi ja merkitä yhtälöiden kertoimet samoiksi, jolloin saadaan selville $x_0$ ja $y_0$.
 
 		\begin{align*}
 			y-y_0	&= a(x-x_0)^2 \\
@@ -107,10 +120,54 @@ Näissä kummassakin muodossa vakio $a$ on sama.
 \end{esimvast}
 \end{esimratk}
 
-
-
 \end{esimratk}
 \end{esimerkki}
+
+%%%FIX ME: Tulisiko tämän olla tässä vai liitteissä 'todistuksia'-osiossa?
+\subsection{Geometrisen määritelmän yhteys normaali- ja huippumuotoiseen yhtälöön}
+
+Edellä paraabeli määriteltiin käyräksi, joka koostuu niistä pisteistä jotka ovat yhtä kaukana sekä polttopisteestä että johtosuorasta. Aikaisemmassa esimerkissä saatiin erään tällaisen käyrän yhtälöksi toisen asteen polynomi. Voidaan osoittaa tämän pätevän yleisesti:
+
+Olkoon $(p,q)$ polttopiste, $(x_0, y_0)$ huippupiste, suora $y = r$ johtosuora ja $P=(x, y)$ paraabelin yleinen piste. Koska $P$ on yhtä kaukana sekä polttopisteestä että johtosuorasta, voidaan kirjoittaa kuten aikaisemmassa esimerkissä
+\begin{align*}
+|y-r| & = \sqrt{(x-p)^2 + (y-q)^2} &&\ppalkki \text{kumpikin puoli jälleen $>0$}\\
+(y-r)^2 &= (x-p)^2 + (y-q)^2 \\
+y^2 -2yr + r^2 &= x^2 -2xp + p^2 + y^2 -2yq + q^2 &&\ppalkki \text{ryhmitellään tekijät}\\
+2(q-r)y &=  x^2 - 2px + p^2 +q^2 -r^2  &&\ppalkki q \not = r\\ 
+y &= \frac{x^2 - 2px + p^2 +q^2 -r^2}{2(q-r)}  &&\ppalkki q^2 -r^2 = (q-r)(q+r) \\
+y &= \frac{1}{2(q-r)}(x^2 - 2p x +p^2) + \frac{q+r}{2} &&\ppalkki \text{täydennetään neliöksi}\\
+y &= \frac{1}{2(q-r)}(x - p)^2 + \frac{q+r}{2} \\
+y - \frac{q+r}{2} &= \frac{1}{2(q-r)}(x - p)^2.
+\end{align*}
+Saatu muoto saattaa näyttää jo tutulta. 
+
+Tarkastellaan paraabelin huipun $(x_0, y_0)$ koordinaatteja: lyhin mahdollinen jana polttopisteestä $(p,q)$ johtosuoralle $y =r$ kulkee huipun $(x_0, y_0)$ kautta ja on kohtisuorassa johtosuoraa vastaan (piirrä kuva). Näin ollen huipun ja polttopisteen $x$-koordinaatit ovat samat, $x_0 = p$. 
+
+Geometrisen määritelmän mukaan paraabelin piste on yhtä kaukana polttopisteestä ja johtosuorasta: toisin sanoen huipun $y$-koordinaatti on pisteiden $(x_0, r)$ ja $(x_0, q)$ välisen janan puolivälissä, jolloin $y_0 = \frac{1}{2}(r+q)$. Sijoitetaan tämä ja $p = x_0$ aikaisempaan yhtälöön:
+
+\begin{align*}
+y - \frac{q+r}{2} &= \frac{1}{2(q-r)}(x - p)^2 &&\ppalkki p = x_0, \, y_0 = \frac{r+q}{2} \\
+y -y_0 &= \frac{1}{2(q-r)}(x - x_0)^2 &&\ppalkki \text{Valitaan } a = \frac{1}{2(q-r)} \\
+y - y_0 &= a(x - x_0)^2
+\end{align*}
+
+Siis saadaan paraabelin huippumuotoinen yhtälö.
+
+Huippumuotoisen yhtälön kohdalla totesimme, että $b = -2ax_0$ ja $c = ax_0^2 +y_0$. Tämän voi nähdä myös aikaisemmasta välivaiheesta:
+\begin{align*}
+y &= \frac{1}{2(q-r)}x^2 - \frac{2p}{2(q-r)}x +\frac{p^2 +q^2 -r^2}{2(q-r)} \\
+y &= \frac{1}{2(q-r)}x^2 - \frac{2p}{2(q-r)}x +\frac{p^2}{2(q-r)} + \frac{q+r}{2}
+\intertext{Sijoitetaan $a = \dfrac{1}{2(q-r)}, p = x_0 $ ja $y_0 = (q+r)/2$ :}
+y &= ax^2 - 2ax_0x + ax_0^2 + y_0 \\
+y &= ax^2 + bx +c
+\end{align*}
+
+Entuudestaan tiedämme, että paraabeli $y = ax^2 + bx +c$ aukeaa ylöspäin kun $a >0$ ja alaspäin kun $a < 0$. Yhtälö \[a = \frac{1}{2(q-r)}\] antaa tälle geometrisen yhteyden polttopisteen ja johtosuoran keskinäiseen sijaintiin: 
+
+$a > 0$ kun $q > r$, eli polttopisteen $y$-koordinaatti on suurempi kuin johtosuoran (eli polttopiste on johtosuoran yläpuolella). Vastaavasti $a < 0$ kun $q < r$ ja polttopiste sijaitsee johtosuoran alapuolella.
+
+%%%Harjoitustehtäväksi?
+Yllä teimme oletuksen, että $q \not = r$. Millainen käyrä syntyisi, jos pätisi $q = r$?
 
 \begin{tehtavasivu}
 
