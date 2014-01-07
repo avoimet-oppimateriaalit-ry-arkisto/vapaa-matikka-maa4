@@ -51,26 +51,28 @@ Tarkastellaan esimerkkinä suoraa $l$, jonka normaalimuotoinen yhtälö on $3x-4
 Selvitetään pisteen $P=(8, 5)$ etäisyys suorasta $l$.
 
 \begin{kuva}
-    kuvaaja.pohja(-1, 10, -4, 5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.pohja(-1, 10, -4, 5, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
     with palautin():
         vari("lightgray")
         kuvaaja.piirraParametri("8+0.75*t", "5-t", a = 0, b = 1.28)
     kuvaaja.piirra(".75*x-3", nimi = "$l$", kohta = 2, suunta = -45)    
     kuvaaja.piste((8,5), "$P$", -135)
+    kuvaaja.piste((8.96, 3.72), "$Q$", -45)
 \end{kuva}
 
 %    kuvaaja.piirra(".75*x-3", nimi = "$3x -4y- 12=0$", kohta = 2, suunta = -45)    
 
+Nähdään, että pienin mahdollinen etäisyys pisteestä suoralle on sellaisen janan $PQ$ pituus, joka kulkee pisteestä $P$ suoralle $l$ siten, että se on kohtisuorassa suoraan $l$ nähden. (Mikäli tämä ei ole itsestään selvää, sen voi todeta piirtämällä ympyrän, jonka keskipiste on $P$ ja joka sivuaa suoraa $l$ täsmälleen yhdessä pisteessä $Q$. Suora $l$ on näin piirretyn ympyrän tangentti, jolloin sen ja ympyrän säteen välinen kulma on suorakulma. Samaisen ympyrän säde puolestaan on selvästi lyhin etäisyys pisteestä $P$ suoralle.)
 
-Kuvaan on merkitty suorakulmaiset kolmiot $ABO$ ja $PRQ$: $PQ$ on suoralle $l$ piirretty normaali ($Q$ suoralla), $A$ ja $B$ ovat suoran $l$ ja $x$- ja $y$-akselin leikkauspisteet, vastaavasti, $O$ origo, ja $R$ on suoralla $l$ siten, että $PR$ on $y$-akselin suuntainen.
-Etäisyys, jonka haluamme selvittää, on kolmion $PQR$ sivun $PQ$ pituus.
-Tehtävä ratkeaa, kun huomataan, että kolmiot $ABO$ ja $PRQ$ ovat yhdenmuotoisia.
-Tämä johtuu siitä, että molemmat ovat suorakulmaisia ja lisäksi kulmat $ABO$ ja $PRQ$ ovat samankohtaisina yhtä suuret (ks. kuva alla).
+Tehtävä ratkeaa, kun huomataan, että valitsemalla janan $PQ$ lisäksi suoralta sopivan kolmannen pisteen $R$ saadaan kolmio, joka on yhdenmuotoinen suoran $l$ ja koordinaattiakselien rajaaman kolmion kanssa. Alla on tilanteesta kuva:
 
-[EI OLE VALMIS, KUVIA JA TEKSTISELITYSTÄ VOISI VIELÄ MIETTIÄ]
+%%%[EI OLE VALMIS, KUVIA JA TEKSTISELITYSTÄ VOISI VIELÄ MIETTIÄ]
+%%%FIXME: (^Koskien yo:) tekstiä hieman uusiksi (pyritty avaamaan päättelyä), voisiko silti tätä vielä hioa?
+%%%Lisäksi korjattu alla todistuksessa sekaisin menneet OA/OB. (Kuvastahan näkee että OA =4!) -aa-m-sa
 
 %    kuvaaja.pohja(-1, 10, -4, 5)
-\begin{kuva}
+\begin{kuva}\\
+    kuvaaja.pohja(-1, 10, -4, 5, ruudukko = False)
     kuvaaja.piirra(".75*x-3", a = -1, b = 10)
     kuvaaja.piirraParametri("0", "t", a = -3, b = 0)
     kuvaaja.piirraParametri("t", "0", a = 0, b = 4)
@@ -84,7 +86,16 @@ Tämä johtuu siitä, että molemmat ovat suorakulmaisia ja lisäksi kulmat $ABO
     kuvaaja.piste((8,3), "$R$", -45)
 \end{kuva}
 
-Kolmion $OAB$ sivut selviävät, kun ratkaistaan, missä pisteissä suora leikkaa $x$- ja $y$-akselit.
+Haluamamme etäisyys on suoralle $l$ piirretty normaali $PQ$. Piste $R$ on suoralla $l$ siten, että $PR$ on $y$-akselin suuntainen. $A$ ja $B$ ovat suoran $l$ ja $x$- ja $y$-akselin leikkauspisteet ja $O$ on origo.
+
+Kolmiot $ABO$ ja $PRQ$ ovat yhdenmuotoisia, sillä molemmat ovat suorakulmaisia ja lisäksi kulmat $ABO$ ja $PRQ$ ovat samankohtaisina yhtä suuret. Koska kolmiot ovat yhdenmuotoiset, saadaan verranto
+\begin{align*}
+\frac{PQ}{PR} &=\frac{OA}{AB}\\
+\intertext{josta saadaan etäisyydelle PQ yhtälö}
+PQ &=\frac{OA}{AB}\cdot PR.
+\end{align*}
+
+Kolmion $OAB$ sivut $OA$ ja $AB$ selviävät, kun ratkaistaan, missä pisteissä suora leikkaa $x$- ja $y$-akselit.
 Asettamalla suoran yhtälössä $x=0$ saadaan
 \[
 3x-4\cdot 0=12, \quad \text{josta} \quad x=\frac{12}{3}=4.
@@ -93,16 +104,12 @@ Pisteen $A$ koordinaatit ovat siis $(4, 0)$. Toisaalta kun $x=0$, saadaan
 \[
 3\cdot 0-4\cdot y=12, \quad \text{josta} \quad y=-\frac{12}{4}=-3.
 \]
-Pisteen $B$ koordinaatit ovat siis $(0, 3)$. Nyt tunnetaan sivut $OB=4$ ja $OA=3$, ja lisäksi Pythagoraan lauseen perusteella
+Pisteen $B$ koordinaatit ovat siis $(0, -3)$. Koska piste $O$ on origo $(0,0),$ tunnetaan nyt sivut $OA=4$ ja $OB=3$. Sivu $AB$ saadaan Pythagoraan lauseen perusteella
 \[
 AB=\sqrt{OA^2+OB^2}=\sqrt{4^2+3^2}=\sqrt{25}=5.
 \]
 
-Koska kolmiot $OAB$ ja $PQR$ ovat yhdenmuotoiset, saadaan verranto
-\[
-\frac{PQ}{PR}=\frac{OB}{AB}.
-\]
-Tunnemme jo sivut $OB$ ja $AB$, joten enää on selvitettävä sivu $PR$. Tämä on sama kuin pisteiden $P$ ja $R$ välinen etäisyys.
+Enää on selvitettävä sivu $PR$. Tämä on sama kuin pisteiden $P$ ja $R$ välinen etäisyys.
 
 Pisteen $R$ $x$-koordinaatti on sama kuin pisteen $P$, eli 8. Koska $R$ on suoralla $l$, sen $y$-koordinaatti saadaan suoran yhtälöstä:
 \begin{align*}
@@ -111,14 +118,19 @@ Pisteen $R$ $x$-koordinaatti on sama kuin pisteen $P$, eli 8. Koska $R$ on suora
 -4y & =-12 \\
 y & =3. \\
 \end{align*}
-Nyt siis $R=(8, 3)$. Pisteiden $P$ ja $R$ välinen etäisyys on siis $5-3=2$, ja tämä on sivun $q$ pituus.
+Nyt siis $R=(8, 3)$. Pisteiden $P$ ja $R$ välinen etäisyys on siis $5-3=2$, ja tämä on sivun $PR$ pituus.
 
-Kun verrantoon $\frac{PQ}{PR}=\frac{OB}{AB}$ sijoitetaan tunnetut sivujen pituudet, saadaan
+Kun verrannosta saatuun yhtälöön sijoitetaan tunnetut sivujen pituudet, saadaan
 \begin{align*}
-\frac{PQ}{2} & =\frac{4}{5} \quad \ppalkki \cdot 2 \\[3pt]
-PQ & =\frac{8}{5}.
+PQ &=\frac{OA}{AB}\cdot PR  && \ppalkki OA= 4, AB=5, PR= 2\\
+PQ & =\frac{4\cdot 2}{5} = \frac{8}{5}.
 \end{align*}
 Siispä pisteen $P$ etäisyys suorasta $l$ on $\dfrac{8}{5}$.
+
+Tässä valittu piste $R$ ei suinkaan ollut ainoa vaihtoehto. Minkä (tai mitkä?) muun pisteen olisi voinut valita?
+
+
+
 
 \subsection*{Pisteen etäisyys suorasta kaavan avulla}
 
@@ -129,7 +141,7 @@ Jos suoran yhtälö on annettu normaalimuodossa $ax+by+c=0$ ja pisteen koordinaa
 d=\frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}
 \]
 }
-Kaavan johtaminen esitetään liitteessä. (VAI TÄSSÄ?)
+Kaavan johtaminen esitetään liitteessä. (VAI TÄSSÄ?) (Sekavaa!?! Alemmaksi on jo kirjoitettu todistus, mutta se ei perustu yhdenmuotoisiin kolmioihin! Onko tämä tarkoitus? -aa-m-sa)
 
 \begin{esimerkki} Lasketaan aiemman esimerkin pisteen $P=(8, 5)$ etäisyys suorasta $l$, jonka normaalimuotoinen yhtälö on $3x-4y-12=0$.
 \begin{esimratk}
