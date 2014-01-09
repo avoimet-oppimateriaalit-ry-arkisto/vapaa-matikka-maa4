@@ -4,12 +4,12 @@
 KIRJOITA TÄHÄN LUKUUN
 
 \begin{itemize}
-\item pisteen etäisyyden suorasta laskeminen yhdenmuotoisilla
+\item TEHTY pisteen etäisyyden suorasta laskeminen yhdenmuotoisilla
 kolmioilla
-\item pisteen etäisyys suorasta -kaava: $d=\frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}$
+\item TEHTY pisteen etäisyys suorasta -kaava: $d=\frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}$
 \item sovelluksia
 \item kaavan todistuksen voi laittaa tähän osioon tai liitteeksi,
-käytetään yhdenmuotoisia kolmioita
+käytetään yhdenmuotoisia kolmioita. TODISTUS ON (muttei kolmioilla)
 \end{itemize}
 
 KIITOS!}
@@ -62,7 +62,7 @@ Selvitetään pisteen $P=(8, 5)$ etäisyys suorasta $l$.
 
 %    kuvaaja.piirra(".75*x-3", nimi = "$3x -4y- 12=0$", kohta = 2, suunta = -45)    
 
-Nähdään, että pienin mahdollinen etäisyys pisteestä suoralle on sellaisen janan $PQ$ pituus, joka kulkee pisteestä $P$ suoralle $l$ siten, että se on kohtisuorassa suoraan $l$ nähden. (Mikäli tämä ei ole itsestään selvää, sen voi todeta piirtämällä ympyrän, jonka keskipiste on $P$ ja joka sivuaa suoraa $l$ täsmälleen yhdessä pisteessä $Q$. Suora $l$ on näin piirretyn ympyrän tangentti, jolloin sen ja ympyrän säteen välinen kulma on suorakulma. Samaisen ympyrän säde puolestaan on selvästi lyhin etäisyys pisteestä $P$ suoralle.)
+Nähdään, että pienin mahdollinen etäisyys pisteestä suoralle on sellaisen janan $PQ$ pituus, joka kulkee pisteestä $P$ suoralle $l$ siten, että se on kohtisuorassa suoraan $l$ nähden. (Mikäli tämä ei tunnu itsestään selvältä, voit havainnoillistaa tilannetta esimerkiksi piirtämällä ympyrän, jonka keskipiste on $P$ ja joka sivuaa suoraa $l$ tarkalleen yhdessä pisteessä $Q$.)
 
 Tehtävä ratkeaa, kun huomataan, että valitsemalla janan $PQ$ lisäksi suoralta sopivan kolmannen pisteen $R$ saadaan kolmio, joka on yhdenmuotoinen suoran $l$ ja koordinaattiakselien rajaaman kolmion kanssa. Alla on tilanteesta kuva:
 
@@ -129,12 +129,23 @@ Siispä pisteen $P$ etäisyys suorasta $l$ on $\dfrac{8}{5}$.
 
 Tässä valittu piste $R$ ei suinkaan ollut ainoa vaihtoehto. Minkä (tai mitkä?) muun pisteen olisi voinut valita?
 
+%%%FIXME Onko tämä järkevä tapa toteuttaa (tähti-)tehtävä?
+%%%Jos ei, voi toki siirtää Tehtävä-osioon.
+\laatikko[$\star$ Tavoittele valaistumista]{Samaa periaatetta soveltaen voit myös kirjoittaa yleisen kaavan minkä tahansa  pisteen $P=(x_0,y_0)$ etäisyydelle yleisestä suorasta $l$, jonka yhtälö on $ax + by +c = 0$. Tässä voit olettaa että koordinaattiakselien ja suoran $l$ väliin jäävä kolmio $OAB$ on olemassa.
 
+\emph{Vihje.} Etsi suoran $l$ yhtälön avulla yhtälöt pisteiden $A, B$ ja $R$ koordinaateille. $A, B:$ Origo on edelleen $(0,0)$. $R:$ $R = (x_r, y_r) = (x_0, y_r)$, ratkaise $y_r$.
+
+Tässä todistuksessa on kuitenkin ongelma: Entäpä jos suora $l$ kulkee origon kautta, jolloin kolmiota $OAB$ ei ole ja hypotenuusa $AB = 0$? Verrantoa ei voi tällöin kirjoittaa, sillä nollallahan ei voi jakaa. Osaatko valita jonkin toisen kolmion, joka on aina olemassa kun etäisyys $PQ > 0$ ja jonka kanssa kolmio $PQR$ on yhdenmuotoinen?
+
+\emph{Vihje. Pisteiden $P, Q, R$ lisäksi riittää valita suoralta $l$ eräs neljäs piste $S$.} 
+
+%%%FIXME Alla hieman kömpelö virkerakenne, voisiko parantaa?
+%%%FIXME + "Todistus esitetään liitteessä." -> todistus liitteeseen?
+Todistus esitetään liitteessä. Saman (allaolevan) kaavan voi myös tämänkaltaisen geometrisen tarkastelun lisäksi johtaa analyyttisesti löytämällä kaksi yhtälöä, jotka piste $Q$ toteuttaa, ja ratkaisemalla etäisyyden niistä, kuten  alla tehdään.}
 
 
 \subsection*{Pisteen etäisyys suorasta kaavan avulla}
 
-Edellä esitetystä tavasta laskea pisteen etäisyys suorasta voidaan johtaa myös kaava.
 Jos suoran yhtälö on annettu normaalimuodossa $ax+by+c=0$ ja pisteen koordinaatit ovat $(x_0, y_0)$, etäisyys $d$ saadaan seuraavasta kaavasta.
 \laatikko[Pisteen etäisyys suorasta]{
 \[
@@ -220,6 +231,7 @@ Koska $Q$ kuuluu suoralle $l$ ja sen normaalille, sen koordinaattien on toteutet
     \end{array}
     \right.
 \]
+
 Yhtälöpari voidaan ratkaista yhteenlaskumenetelmällä kertomalla ylempi yhtälö $a$:lla ja alempi $b$:llä.
 \[
 \left\{    
@@ -235,6 +247,7 @@ ja laskemalla yhtälöt puolittain yhteen
  (a^2+b^2)x_q &= -ac-aby_0+b^2x_0 \\
  x_q = \frac{-ac-aby_0+b^2x_0}{(a^2+b^2)}.
 \end{align*}
+
 Vastaavasti
 \[
 y_q = \frac{-bc+a^2y_0-abx_0}{(a^2+b^2)}.
