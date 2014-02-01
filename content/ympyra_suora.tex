@@ -5,7 +5,7 @@ KIRJOITA TÄHÄN LUKUUN
 
 \begin{itemize}
 \item TEHTY - ympyrän ja suoran leikkauspisteiden ratkaiseminen 
-\item ympyrän tangetin määrittäminen sekä kehällä olevan (kohtisuorassa sädettä vastaan) että
+\item ympyrän tangetin määrittäminen sekä kehällä olevan (kohtisuorassa sädettä vastaan TEHTY) että
 sen ulkopuolisen pisteen kautta (kaksi tapaa: pisteen etäisyys suorasta -kaava (TEHTÄVÄKSI?) tai diskriminantti = 0 TEHTY)
 \item TEHTY kahden ympyrän leikkauspisteiden ratkaiseminen yhtälöparilla
 \end{itemize}
@@ -212,6 +212,29 @@ Jälleen esimerkistä nähdään, että riippuen syntyvän toisen asteen yhtäl�
     kuvaaja.piirraParametri("4.123*cos(t)-2","4.123*sin(t)-4", a = 0, b = 2*pi)
 	
 \end{kuva}
+
+Ympyrän tangentti saadaan yksikäsitteisesti myös kun tiedetään ympyrän kehän piste jossa tangentti sivuaa ympyrää:
+
+\begin{esimerkki}
+Mikä on ympyrää $(x-3)^2 + (y -1)^2 = 18$ pisteessä $(6,4)$ sivuavan tangentin yhtälö?
+\begin{esimratk}
+Koska tangentti kulkee pisteen $(6,4)$ kautta, jolloin sen yhtälö on 
+\begin{align*}
+y - 4 &= k_1(x-6) \\
+y &= k_1x -6k_1 +4.
+\end{align*}
+Voisimme sijoittaa tämän edellisten esimerkkien tapaan ympyrän yhtälöön, mutta toinen (tässä tapauksessa helpompi) tapa on huomata tangentin olevan kohtisuorassa ympyrän sädettä eli keskipisteen $(3, 1)$ (jonka voimme lukea suoraan ympyrän yhtälöstä) ja pisteen $(6,4)$ välistä janaa vasten. Nämä kaksi pistettä määrittävät suoran, jonka kulmakerroin $k_2$ on
+\begin{align*}
+k_2 = \frac{y_2 - y_1}{x_2 - x_1} = \frac{4-1}{6-3} = \frac{3}{3} = 1.
+\end{align*}
+Koska suoran ja sen normaalin kulmakertoimien tulo on $k_1 k_2 = -1$, saadaan tangentin kulmakertoimeksi $k_1 = k_1 \cdot 1 = -1$, jonka voimme sijoittaa tangentin yhtälöön.
+\end{esimratk}
+\begin{esimvast}
+Tangentin yhtälö on $y = -x +10$.
+\end{esimvast}
+\end{esimerkki}
+
+%%%KUVA? %%%https://www.wolframalpha.com/input/?i=y%20%3D%20%2Dx%20%2B10%2C%20(x%2D3)%5E2%20%2B%20(y%20%2D1)%5E2%20%3D%2018
 
 \begin{tehtavasivu}
 
