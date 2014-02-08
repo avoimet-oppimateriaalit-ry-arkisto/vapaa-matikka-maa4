@@ -81,7 +81,7 @@ Itseisarvoepäyhtälöiden ratkaisu voidaan usein myös palauttaa jo tuttuihin t
 
 \begin{esimerkki} Ratkaise epäyhtälö $|2x-1|>|x+2|$.
 
-\begin{esimratk} \textbf{Tapa 1} Koska molemmat puolet ovat epänegatiivisia, itseisarvomerkit voitaisiin poistaa korottamalla epäyhtälö puolittain toiseen potenssiin. Mutta miten käy epäyhtälön merkille? Jos kaksi epänegatiivista lukua korotetaan toiseen potenssiin, niiden keskinäinen järjestys säilyy. Voimme siis korottaa tehtävän epäyhtälön puolittain toiseen potenssiin, ja epäyhtälömerkin suunta säilyy. Päättely voidaan suorittaa myös toiseen suuntaan: Jos vasemman puolen neliö on oikean puolen neliötä suurempi, on myös itselausekkeen oltava itseisarvoltaan suurempi. Tämän jälkeen epäyhtälöä käsitellään toisen asteen epäyhtälönä.
+\begin{esimratk} \textbf{Tapa 1} Koska molemmat puolet ovat epänegatiivisia, itseisarvomerkit voitaisiin poistaa korottamalla epäyhtälö puolittain 		toiseen potenssiin. Mutta miten käy epäyhtälön merkille? Jos kaksi epänegatiivista lukua korotetaan toiseen potenssiin, niiden keskinäinen järjestys säilyy. Voimme siis korottaa tehtävän epäyhtälön puolittain toiseen potenssiin, ja epäyhtälömerkin suunta säilyy. Päättely voidaan suorittaa myös toiseen suuntaan: Jos vasemman puolen neliö on oikean puolen neliötä suurempi, on myös itselausekkeen oltava itseisarvoltaan suurempi. Tämän jälkeen epäyhtälöä käsitellään toisen asteen epäyhtälönä.
 
 \begin{align*}
 |2x-1|^2 & >|x+2|^2 \\
@@ -98,6 +98,22 @@ x & =\frac{8\pm\sqrt{64+36}}{6} \\
 x & =\frac{8\pm 10}{6} \\
 x=3 \quad & \text{tai} \quad x=-\frac{1}{3}
 \end{align*}
+
+\begin{merkkikaavio}{2}
+	\merkkikaavioKohta{$-1/3$}
+	\merkkikaavioKohta{$3$}
+
+	\merkkikaavioFunktio{$3x²-8x-3$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+
+\end{merkkikaavio}
+% isompi kuva rikkoo asiat jos x ja y skaala liian suuri(LaTeX stack overflow), ping Sharph () 
+\begin{kuva}
+  kuvaaja.pohja(-2, 4,  -9, 5, korkeus =  5, leveys = 5, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+  kuvaaja.piirra("3*x**2-8*x-3")
+\end{kuva}
 
 TÄHÄN MERKKIKAAVIO JA KUVAAJA
 
