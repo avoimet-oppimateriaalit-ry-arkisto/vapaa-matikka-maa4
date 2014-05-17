@@ -1,68 +1,71 @@
+\providecommand{\lukufilter}[2]{#2} % ylikirjoitetaan kaanna_luku.sh -skriptistä.
+\newcommand{\luku}[1]{\lukufilter{#1}{\input{content/#1}}} % luku
+
 \Opensolutionfile{ans}[content/LIITE_vastaukset]
 
 \chapter{Esitietoja}
-	\input{content/itseisarvo}
-	\newpage \input{content/epayhtalo}
+	\luku{itseisarvo}
+	\newpage \luku{epayhtalo}
 	% itseisarvoepäyhtälöt
-	\newpage \input{content/yhtaloryhma}
+	\newpage \luku{yhtaloryhma}
 	% sijoitusmenetelmä
 	% yhtälöiden laskeminen yhteen
 	% ratkaisujen määrä
-	\newpage \input{content/koordinaatisto}
+	\newpage \luku{koordinaatisto}
 	% yleistä käyristä, esim. Kartesiuksen lehdestä jotain
 	% kahden pisteen välinen etäisyys (Pythagoraan lauseella)
 
 \chapter{Suorat}
-	\input{content/suora}
+	\luku{suora}
 	% ratkaistu muoto y = kx + b, kulmakerroin ja vakiotermi
 	% nollakohdat ja leikkauspisteet
 	% vaaka- ja pystysuorat
-	\newpage \input{content/suora_esitykset}
+	\newpage \luku{suora_esitykset}
 	% esitys y-y_0=k(x-x_0)
 	% esitys ax + by + c = 0 (normaalimuoto)
-	\newpage \input{content/suora_asema}
+	\newpage \luku{suora_asema}
 	% suorien keskinäinen asema, yhdensuuntaiset suorat
 	% suoralle ja sen normaalille k_1 * k_2 = -1
-	\newpage \input{content/pisteen_etaisyys}
+	\newpage \luku{pisteen_etaisyys}
 	% kaava pisteen etäisyydelle suorasta
 
 \chapter{Toisen asteen käyrät}
-	\input{content/diskriminantti}
+	\luku{diskriminantti}
 	% diskriminantin pikakertaus
-	\newpage \input{content/ympyra}
+	\newpage \luku{ympyra}
 	% ympyrän yhtälö määritelmästä
 	% ensin origokeskeinen
 	% keskipiste ja säde muissa tapauksissa neliöksi täydentämällä
-	\newpage \input{content/ympyra_suora}
+	\newpage \luku{ympyra_suora}
 	% suoran ja ympyrän leikkauspisteet
 	% tangentit
-	\newpage \input{content/paraabeli}
+	\newpage \luku{paraabeli}
 	% merkitys toisen asteen polynomin kuvaajana
 	% geometrisen määritelmän maininta
-	\newpage \input{content/paraabeli_sovelluksia}
+	\newpage \luku{paraabeli_sovelluksia}
 	% huipun x-koordinaatti on -b/2a
 		% todistus liitteeksi -Ville
 		% todistus tähän -Niko
 	% paraabelin tangentit
-	\newpage \input{content/paraabeli_kaannetty}
+	\newpage \luku{paraabeli_kaannetty}
 	% paraabeli x = ay^2  +by + c
-	\newpage \input{content/sekalaista}
+	\newpage \luku{sekalaista}
 	% esimerkkejä ja tehtäviä (erikoisia, vaikeita, yms.)
 
 \Closesolutionfile{ans}
 
 \liitetyyli
 
-\section{Vastaukset} \input{content/LIITE_vastaukset}
+\section{Vastaukset} \luku{LIITE_vastaukset}
 
-\newpage \input{content/LIITE_harjoituskokeita}
-\newpage \input{content/LIITE_ylioppilaskokeita}
+\newpage \luku{LIITE_harjoituskokeita}
+\newpage \luku{LIITE_ylioppilaskokeita}
 
-\newpage \input{content/LIITE_tasokayra}
+\newpage \luku{LIITE_tasokayra}
 	% esim. piste, kaksi suoraa, tyhjä
-\newpage \input{content/LIITE_ellipsi}
-\newpage \input{content/LIITE_hyperbeli}
-\newpage \input{content/LIITE_kolmioepayhtalo}
-\newpage \input{content/LIITE_todistuksia}
+\newpage \luku{LIITE_ellipsi}
+\newpage \luku{LIITE_hyperbeli}
+\newpage \luku{LIITE_kolmioepayhtalo}
+\newpage \luku{LIITE_todistuksia}
 	% kaava pisteen etäisyydelle suorasta
 	% kaikkien paraabelien yhdenmuotoisuus
