@@ -43,7 +43,7 @@ Etäisyys on $1,7-(-1)=2,7$.
 \end{minipage}
 
 Jos suora on kalteva, etäisyyden määrittäminen ei ole näin suoraviivaisesti.
-Seuraavaksi tutustutaan kahteen tapaan tämän pulman ratkaisemiseksi.
+Seuraavaksi tutustutaan erääseen tapaan tämän pulman ratkaisemiseksi.
 
 \subsection*{Pisteen etäisyys suorasta yhdenmuotoisten kolmioiden avulla}
 
@@ -129,22 +129,9 @@ Siispä pisteen $P$ etäisyys suorasta $l$ on $\dfrac{8}{5}$.
 
 Tässä valittu piste $R$ ei suinkaan ollut ainoa vaihtoehto. Minkä (tai mitkä?) muun pisteen olisi voinut valita?
 
-%%%FIXME Onko tämä järkevä tapa toteuttaa (tähti-)tehtävä?
-%%%Jos ei, voi toki siirtää Tehtävä-osioon.
-\laatikko[$\star$ Tavoittele valaistumista]{Samaa periaatetta soveltaen voit myös kirjoittaa yleisen kaavan minkä tahansa  pisteen $P=(x_0,y_0)$ etäisyydelle yleisestä suorasta $l$, jonka yhtälö on $ax + by +c = 0$. Tässä voit olettaa että koordinaattiakselien ja suoran $l$ väliin jäävä kolmio $OAB$ on olemassa.
-
-\emph{Vihje.} Etsi suoran $l$ yhtälön avulla yhtälöt pisteiden $A, B$ ja $R$ koordinaateille. $A, B:$ Origo on edelleen $(0,0)$. $R:$ $R = (x_r, y_r) = (x_0, y_r)$, ratkaise $y_r$.
-
-Tässä todistuksessa on kuitenkin ongelma: Entäpä jos suora $l$ kulkee origon kautta, jolloin kolmiota $OAB$ ei ole ja hypotenuusa $AB = 0$? Verrantoa ei voi tällöin kirjoittaa, sillä nollallahan ei voi jakaa. Osaatko valita jonkin toisen kolmion, joka on aina olemassa kun etäisyys $PQ > 0$ ja jonka kanssa kolmio $PQR$ on yhdenmuotoinen?
-
-\emph{Vihje. Pisteiden $P, Q, R$ lisäksi riittää valita suoralta $l$ eräs neljäs piste $S$.} 
-
-%%%FIXME Alla hieman kömpelö virkerakenne, voisiko parantaa?
-%%%FIXME + "Todistus esitetään liitteessä." -> todistus liitteeseen?
-Todistus esitetään liitteessä. Saman (allaolevan) kaavan voi myös tämänkaltaisen geometrisen tarkastelun lisäksi johtaa analyyttisesti löytämällä kaksi yhtälöä, jotka piste $Q$ toteuttaa, ja ratkaisemalla etäisyyden niistä, kuten  alla tehdään.}
-
-
 \subsection*{Pisteen etäisyys suorasta kaavan avulla}
+
+Pisteen etäisyydelle suorasta johtaa myös yleinen kaava, jonka käyttö voi olla joskus edellä esitettyä yhdenmuotoisten kolmioiden menetelmän soveltamista helpompaa. Kaavan voi johtaa esimerkiksi yhdenmuotoisilla kolmioilla tai suoraan analyyttisesti (ks. harjoitustehtävät ja liite). Kolmas, vektoreihin perustuva todistus esitetään kurssilla MAA5 Vektorit.
 
 Jos suoran yhtälö on annettu normaalimuodossa $ax+by+c=0$ ja pisteen koordinaatit ovat $(x_0, y_0)$, etäisyys $d$ saadaan seuraavasta kaavasta.
 \laatikko[Pisteen etäisyys suorasta]{
@@ -152,8 +139,10 @@ Jos suoran yhtälö on annettu normaalimuodossa $ax+by+c=0$ ja pisteen koordinaa
 d=\frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}
 \]
 }
-Kaavan johtaminen esitetään liitteessä. (VAI TÄSSÄ?) 
-%%% (Sekavaa!?!) Alemmaksi on jo kirjoitettu todistus, mutta se ei oikeastaan perustu (suoraan) yhdenmuotoisiin kolmioihin! Onko tämä tarkoitus? Tosin on selkeä todistus tuokin. -aa-m-sa)
+
+%%% Kaavan johtamiset: 
+%%%  * yhdenmuotoisilla kolmioilla harjoitustehtäväksi (esimerkki ja muutamat vihjeet riittänevät)
+%%%  * analyyttinen todistus suht' teknistä pyörittelyä, liitteeseen (kuten aiemmin kommenteissa ehdotettu todistusta tästä liitteeseen)
 
 \begin{esimerkki} Lasketaan aiemman esimerkin pisteen $P=(8, 5)$ etäisyys suorasta $l$, jonka normaalimuotoinen yhtälö on $3x-4y-12=0$.
 \begin{esimratk}
@@ -197,71 +186,6 @@ Pisteet ovat $\bigl(6, \frac{99}{8}\bigr)$ ja $\bigl(6, -\frac{27}{8}\bigr)$.
 \end{esimerkki}
 
 
-
-\subsection*{Pisteen etäisyys suorasta, kaavan todistus}
-
-Lasketaan pisteen $P = (x_0, y_0)$ etäisyys suorasta $l$: $ax+by+c=0$.
-
-Olkoon $Q$ suoralla $l$ siten, että $l$ ja $PQ$ ovat kohtisuorassa. Huomataan, että jos piste $R$ on suoralla $l$, Pythagoraan lauseen mukaan
-\[
-PR^2 = PQ^2+QR^2 \geq PQ^2,
-\]
-jolloin myös $PR \geq PQ$. Siis $PQ$ on määritelmän nojalla pisteen $P$ etäisyys suorasta $l$.
-
-Suorat $PQ$ ja $l$ ovat kohtisuorassa. Jos $l$ ei ole $x$-, eikä $y$-akselin suuntainen, eli $a,b \neq 0$ sen kulmakerroin on $-\frac{a}{b}$. Koska suoran ja normaalin kulmakerrointen tulo on $-1$, suoran $PQ$ kulmakerroin on
-\[
--\frac{1}{\frac{-a}{b}} = \frac{b}{a}.
-\]
-Se kulkee lisäksi pisteen $(x_0,y_0)$ kautta, joten sen yhtälö on
-\[
-y-y_0 = \frac{b}{a}(x-x_0)
-\]
-tai normaalimuodossa
-\[
-bx-ay+ay_0-bx_0 = 0.
-\]
-Toisaalta, jos $a = 0$, suora $PQ$ on muotoa $x+C$, jollain reaaliluvulla $C$; koska se lisäksi kulkee pisteen $P$ kautta, sen on oltava edellistä muotoa. Sama päättely voidaan toistaa kun $b = 0$, jolloin nähdään, että kaava normaalille pätee myös jos $a = 0$ tai $b = 0$.
-
-Koska $Q$ kuuluu suoralle $l$ ja sen normaalille, sen koordinaattien on toteutettava yhtälöpari
-\[
-\left\{    
-    \begin{array}{rcl}
-        ax_q + by_q + c &=&0 \\
-        bx_q-ay_q+ay_0-bx_0 &=& 0 \\
-    \end{array}
-    \right.
-\]
-
-Yhtälöpari voidaan ratkaista yhteenlaskumenetelmällä kertomalla ylempi yhtälö $a$:lla ja alempi $b$:llä.
-\[
-\left\{    
-    \begin{array}{rcl}
-        a^2x_q + aby_q + ac &=&0 \\
-        b^2x_q-aby_q+aby_0-b^2x_0 &=& 0 \\
-    \end{array}
-    \right.
-\]
-ja laskemalla yhtälöt puolittain yhteen
-\begin{align*}
- a^2x_q + aby_q + ac + b^2x_q-aby_q+aby_0-b^2x_0 &= 0 \\
- (a^2+b^2)x_q &= -ac-aby_0+b^2x_0 \\
- x_q = \frac{-ac-aby_0+b^2x_0}{(a^2+b^2)}.
-\end{align*}
-
-Vastaavasti
-\[
-y_q = \frac{-bc+a^2y_0-abx_0}{(a^2+b^2)}.
-\]
-Nyt
-\begin{align*}
-PQ &= \sqrt{(x_q-x_0)^2+(y_q-y_0)^2} \\
-&= \sqrt{\Big(\frac{-ac-aby_0+b^2x_0-(a^2+b^2)x_0}{a^2+b^2}\Big)^2+\Big(\frac{-bc+a^2y_0-abx_0-(a^2+b^2)y_0}{a^2+b^2}\Big)^2} \\
-& = \frac{\sqrt{(-ac-aby_0-a^2x_0)^2+(-bc-abx_0-b^2 y_0)^2}}{a^2+b^2} \\
-& = \frac{\sqrt{(a(-c-by_0-ax_0))^2+(b(-c-ax_0-by_0))^2}}{a^2+b^2} \\
-& = \frac{\sqrt{(a^2+b^2)(-c-by_0-ax_0)^2}}{a^2+b^2} \\
-& = \frac{\sqrt{(a^2+b^2)}}{a^2+b^2}\sqrt{(-c-by_0-ax_0)^2} \\
-& = \frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}.
-\end{align*}
 \begin{tehtavasivu}
 
 \subsubsection*{Opi perusteet}
@@ -399,6 +323,29 @@ Matti on (autiolla) kolmion muotoisella saarella. Saaren eteläkärki on $5.0$ k
 Lähin ranta on etelä- ja luoteiskärkiä yhdistävä, ja matkaa sille kertyy n. $2.6$ kilometriä
 \end{vastaus}
 \end{tehtava}
+
+\begin{tehtava}
+  Todista kaava pisteen pisteen $P=(x_0,y_0)$ etäisyydelle yleisestä suorasta $l$, jonka yhtälö on $ax + by +c = 0$ yleistämällä yhdenmuotoisten kolmioiden menetelmää.
+  \begin{alakohdat}
+    \alakohta{
+      Voit olettaa ensin, että (esimerkin kuvan merkinnöin) koordinaattiakselien ja suoran $l$ väliin jäävä kolmio $OAB$ on olemassa.
+    }
+    \alakohta{Entä kun kolmiota $OAB$ ei ole olemassa? Milloin näin tapahtuu?
+    }
+  \end{alakohdat}
+  \begin{vastaus}
+    \begin{alakohdat}
+      \alakohta{
+        \emph{Vihje.} Etsi nyt suoran $l$ yhtälön avulla yhtälöt pisteiden $A, B$ ja $R$ koordinaateille. $A, B:$ Origo on edelleen $(0,0)$. $R:$ $R = (x_r, y_r) = (x_0, y_r)$, ratkaise $y_r$.
+    }
+      \alakohta{
+        \emph{Vihje.} Janan $AB$ pituus.
+      }
+    \end{alakohdat}
+  \end{vastaus}
+\end{tehtava}
+
+
 TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
 
 \end{tehtavasivu}
