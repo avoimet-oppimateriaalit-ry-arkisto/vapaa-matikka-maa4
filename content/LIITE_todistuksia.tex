@@ -56,11 +56,18 @@ y_q = \frac{-bc+a^2y_0-abx_0}{(a^2+b^2)}.
 \]
 Nyt
 \begin{align*}
-PQ &= \sqrt{(x_q-x_0)^2+(y_q-y_0)^2} \\
-&= \sqrt{\Big(\frac{-ac-aby_0+b^2x_0-(a^2+b^2)x_0}{a^2+b^2}\Big)^2+\Big(\frac{-bc+a^2y_0-abx_0-(a^2+b^2)y_0}{a^2+b^2}\Big)^2} \\
-& = \frac{\sqrt{(-ac-aby_0-a^2x_0)^2+(-bc-abx_0-b^2 y_0)^2}{\left(a^2+b^2}\right)^2} \\
-& = \frac{\sqrt{(a(-c-by_0-ax_0))^2+(b(-c-ax_0-by_0))^2}}{a^2+b^2} \\
-& = \frac{\sqrt{(a^2+b^2)(-c-by_0-ax_0)^2}}{a^2+b^2} \\
-& = \frac{\sqrt{(a^2+b^2)}}{a^2+b^2}\sqrt{(-c-by_0-ax_0)^2} \\
-& = \frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}.
+  PQ &= \sqrt{(x_q-x_0)^2+(y_q-y_0)^2} \\
+  &= \sqrt{\Big(\frac{-ac-aby_0+b^2x_0-(a^2+b^2)x_0}{a^2+b^2}\Big)^2+\Big(\frac{-bc+a^2y_0-abx_0-(a^2+b^2)y_0}{a^2+b^2}\Big)^2}, \\
+  \intertext{jota voidaan sieventää:}
+  & = \sqrt{\frac{(-ac-aby_0-a^2x_0)^2+(-bc-abx_0-b^2 y_0)^2}{\left(a^2+b^2\right)^2}} \\
+  & = \frac{\sqrt{(-ac-aby_0-a^2x_0)^2+(-bc-abx_0-b^2 y_0)^2}}{a^2+b^2} \\
+  \intertext{ja huomataan että sopivasti ryhmittelemällä saadaan} 
+  & = \frac{\sqrt{(-a\textcolor{blue}{c}-a\textcolor{blue}{by_0}-a\textcolor{blue}{ax_0})^2+
+  (-b\textcolor{blue}{c}-b\textcolor{blue}{ax_0}-b\textcolor{blue}{by_0})^2}}{a^2+b^2}. \\
+  & = \frac{\sqrt{(a(-c-by_0-ax_0))^2+(b(-c-ax_0-by_0))^2}}{a^2+b^2} \\
+  & = \frac{\sqrt{a^2(-c-by_0-ax_0)+b^2(-c-ax_0-by_0)}}{a^2+b^2}, \\
+  \intertext{jolloin  $\sqrt{a^2 + b^2}$ supistuu pois}
+  & = \frac{\sqrt{(a^2+b^2)(-c-by_0-ax_0)^2}}{a^2+b^2} \\
+  & = \frac{\sqrt{(a^2+b^2)}}{a^2+b^2}\sqrt{(-c-by_0-ax_0)^2} \\
+  & = \frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}.
 \end{align*}
