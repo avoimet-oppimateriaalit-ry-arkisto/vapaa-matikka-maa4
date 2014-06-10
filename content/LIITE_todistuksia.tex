@@ -5,10 +5,11 @@
 Lasketaan pisteen $P = (x_0, y_0)$ etäisyys suorasta $l$: $ax+by+c=0$.
 
 Olkoon $Q$ suoralla $l$ siten, että $l$ ja $PQ$ ovat kohtisuorassa. Huomataan, että jos piste $R$ on suoralla $l$, Pythagoraan lauseen mukaan
-\[
-PR^2 = PQ^2+QR^2 \geq PQ^2,
-\]
-jolloin myös $PR \geq PQ$. Siis $PQ$ on määritelmän nojalla pisteen $P$ etäisyys suorasta $l$.
+\begin{align*}
+  PR^2 &= PQ^2+QR^2 && \ppalkki QR^2 \geq 0\\
+       &\geq PQ^2
+\end{align*}
+jolloin myös $PR \geq PQ$. Siis $PQ$ on määritelmän nojalla pisteen $P$ etäisyys suorasta~$l$.
 
 Suorat $PQ$ ja $l$ ovat kohtisuorassa. Jos $l$ ei ole $x$-, eikä $y$-akselin suuntainen, eli $a,b \neq 0$ sen kulmakerroin on $-\frac{a}{b}$. Koska suoran ja normaalin kulmakerrointen tulo on $-1$, suoran $PQ$ kulmakerroin on
 \[
@@ -33,7 +34,6 @@ Koska $Q$ kuuluu suoralle $l$ ja sen normaalille, sen koordinaattien on toteutet
     \end{array}
     \right.
 \]
-
 Yhtälöpari voidaan ratkaista yhteenlaskumenetelmällä kertomalla ylempi yhtälö $a$:lla ja alempi $b$:llä.
 \[
 \left\{    
@@ -49,12 +49,11 @@ ja laskemalla yhtälöt puolittain yhteen
  (a^2+b^2)x_q &= -ac-aby_0+b^2x_0 \\
  x_q = \frac{-ac-aby_0+b^2x_0}{(a^2+b^2)}.
 \end{align*}
-
 Vastaavasti
 \[
 y_q = \frac{-bc+a^2y_0-abx_0}{(a^2+b^2)}.
 \]
-Nyt
+Nyt janalle $PQ$ voidaan kirjoittaa yhtälö
 \begin{align*}
   PQ &= \sqrt{(x_q-x_0)^2+(y_q-y_0)^2} \\
   &= \sqrt{\Big(\frac{-ac-aby_0+b^2x_0-(a^2+b^2)x_0}{a^2+b^2}\Big)^2+\Big(\frac{-bc+a^2y_0-abx_0-(a^2+b^2)y_0}{a^2+b^2}\Big)^2}, \\
@@ -66,8 +65,8 @@ Nyt
   (-b\textcolor{blue}{c}-b\textcolor{blue}{ax_0}-b\textcolor{blue}{by_0})^2}}{a^2+b^2}. \\
   & = \frac{\sqrt{(a(-c-by_0-ax_0))^2+(b(-c-ax_0-by_0))^2}}{a^2+b^2} \\
   & = \frac{\sqrt{a^2(-c-by_0-ax_0)+b^2(-c-ax_0-by_0)}}{a^2+b^2}, \\
-  \intertext{jolloin  $\sqrt{a^2 + b^2}$ supistuu pois}
   & = \frac{\sqrt{(a^2+b^2)(-c-by_0-ax_0)^2}}{a^2+b^2} \\
+  \intertext{ja  $\sqrt{a^2 + b^2}$ supistuu pois}
   & = \frac{\sqrt{(a^2+b^2)}}{a^2+b^2}\sqrt{(-c-by_0-ax_0)^2} \\
   & = \frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}.
 \end{align*}
