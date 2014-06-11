@@ -12,40 +12,49 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
-%\subsection*{Yhtälöryhmä}
+\subsection*{Yhtälöryhmä}
 
-% \termi{yhtälöryhmä}{Yhtälöryhmällä} tarkoitetaan useaa yhtälöä, joiden täytyy
-% päteä samanaikaisesti. Englannin kielessä yhtälöryhmä tunnetaankin nimellä
-% \textit{simultaneous equations} eli samanaikaiset yhtälöt.
-% \footnote{Termi \textit{system of equations} on vähintäänkin yhtä yleinen.}
-% Yhtälöryhmän (mahdollisten) ratkaisujen tulee siis toteuttaa kaikki yhtälöt.
-% 
-% Tässä luvussa käsitellään yhtälöryhmiä, joissa kaikki yhtälöt ovat ensimmäistä
-% astetta. Tällaisia yhtälöryhmiä kutsutaan \termi{lineaarinen yhtälöryhmä}{lineaarisiksi yhtälöryhmiksi}.
-% Lisäksi myöhemmin kirjassa käsitellään erikoistapauksia toisen asteen yhtälöryhmistä
-% ratkaistaessa kahden ympyrän tai ympyrän ja suoran leikkauspisteitä.
+\termi{yhtälöryhmä}{Yhtälöryhmällä} tarkoitetaan useaa yhtälöä, joiden täytyy
+päteä samanaikaisesti. 
+\footnote{Englannin kielessä yhtälöryhmästä käytetäänkin usein nimeä 
+  \emph{simultaneous equations} eli samanaikaiset yhtälöt.
+  Termi \emph{system of equations} on tosin vähintäänkin yhtä yleinen.}
+Yhtälöryhmän ratkaisujen tulee siis toteuttaa kaikki ryhmän yhtälöt; ratkaisuja ei välttämättä ole.
+
+Tässä luvussa käsitellään yhtälöryhmiä, joissa kaikki yhtälöt ovat ensimmäistä
+astetta eli \emph{lineaarisia yhtälöitä}. 
+Tällaisia yhtälöryhmiä kutsutaankin \termi{lineaarinen yhtälöryhmä}{lineaarisiksi yhtälöryhmiksi}.
+%Lisäksi myöhemmin kirjassa käsitellään muutamia erikoistapauksia toisen asteen yhtälöryhmistä
+%ratkaistaessa kahden ympyrän tai ympyrän ja suoran leikkauspisteitä.
+% re ^:
+%  Ympyrä-kappaleessa implisiittisesti? onko menetelmät jos esitelty siellä, kyllä? 
+%  Jos kyllä, harkittava pitäisikö sitten siinä kohdin mainita 'ratkaistaan \termi{epälineaarinen yhtälöryhmä} blah blah...'
+%  Vai oma, erillinen kappale, tyyliin 'Luku n. Joitain epälineaarisia yhtälöryhmiä', vaikkapa lisämateriaaliksi?
 
 \subsection*{Yhtälöpari}
 
-% Yksinkertaisin mielenkiintoinen yhtälöryhmä on
-% \termi{lineaarinen yhtälöpari}{lineaarinen yhtälöpari}.
-% Lineaarisessa yhtälöparissa on kaksi ensimmäisen asteen yhtälöä.
-% Lineaarinen yhtälöpari voidaan esittää monella tapaa. Tässä
-% kirjassa käytämme pääasiallisesti ns. normaalimuotoa.
-% 
-% \[
-% \left\{
-% \begin{aligned}
-% a_1x+b_1y+c_1 &= 0 \\
-% a_2x+b_2y+c_2 &= 0
-% \end{aligned}
-% \right.
-% \]
-% 
-% $a_1, a_2, b_1, b_2, c_1, c_2 \in \rr$
-% 
-% Lineaarisen yhtälöparin ratkaisu on pari $(x, y) \in \rr^2$, joka toteuttaa molemmat yhtälöt.
+Yksinkertaisin mielenkiintoinen yhtälöryhmä on
+\termi{lineaarinen yhtälöpari}{lineaarinen yhtälöpari}.
+Lineaarisessa yhtälöparissa on kaksi ensimmäisen asteen yhtälöä.
+Lineaarinen yhtälöpari voidaan esittää monella tapaa. Tässä
+kirjassa käytämme pääasiallisesti muotoa, jossa kumpikin yhtälö on \termi{suoran normaalimuotoinen yhtälö}{normaalimuodossa}.
 
+\laatikko[Kahden muuttujan yhtälöparin normaalimuoto]{
+  \[
+    \left\{
+      \begin{aligned}
+      a_1x+b_1y+c_1 &= 0 \\
+      a_2x+b_2y+c_2 &= 0,
+      \end{aligned}
+    \right.
+  \]
+missä $a_1, a_2, b_1, b_2, c_1, c_2 \in \rr$}
+
+Lineaarisen yhtälöparin ratkaisu on lukupari $(x, y)$, joka toteuttaa molemmat yhtälöt.
+
+Lineaarisia yhtälöpareja ratkotaan lukiomatematiikassa pääasiallisesti kahdella menetelmällä.
+Nämä menetelmät ovat \termi{sijoitusmenetelmä}{sijoitusmenetelmä} ja
+\termi{yhteenlaskumenetelmä}{yhteenlaskumenetelmä}.
 \begin{esimerkki}
 Ratkaise yhtälöpari
 \[
@@ -94,19 +103,19 @@ Saadaan ratkaistavaksi yhtälöpari
 \]
 Käytetään \termi{yhteenlaskumenetelmä}{yhteenlaskumenetelmää}, jolla voidaan eliminoida toinen tuntemattomista.
 \begin{align*}
-&\left\{
-\begin{aligned}
-2x-y&= 4 && \ppalkki \cdot 3\\
-3x-2y&= 1 && \ppalkki \cdot (-2)
-\end{aligned}
-\right. \\
-&\left\{
-\begin{aligned}
-6x-3y&= 12 && \ppalkki \text{Lasketaan yhtälöt yhteen.}\\
--6x+4y&= -2.&&
-\end{aligned}
-\right.\\
-&y= 10 \\
+  &\left\{
+    \begin{aligned}
+    2x-y&= 4 && \ppalkki \cdot 3\\
+    3x-2y&= 1 && \ppalkki \cdot (-2)
+    \end{aligned}
+  \right. \\
+  &\left\{
+    \begin{aligned}
+    6x-3y&= 12 && \ppalkki \text{Lasketaan yhtälöt yhteen.}\\
+    -6x+4y&= -2.&&
+    \end{aligned}
+  \right.\\
+  &y= 10 \\
 \end{align*}
 Sijoitetaan $y=10$ jompaan kumpaan alkuperäisistä yhtälöistä, jotta saadaan ratkaistua $x$. Käytetään vaikkapa yhtälöä $3x-2y=1$:
 \begin{align*}
@@ -121,9 +130,19 @@ Yhtälön ratkaisu on $x=7$, $y=10$.
 \end{esimvast}
 \end{esimerkki}
 
-EDELLISEN ESIMERKIN ULKOASUA PITÄÄ VIELÄ MUOKATA. TASAUKSET EIVÄT TOIMI JA LISÄKSI YHTÄLÖPARIN ALLE PITÄISI SUMMAUKSEN KOHDALLA SAADA VIIVA. SAMA ONGELMA MYÖHEMMISSÄ ESIMERKEISSÄ.
+%EDELLISEN ESIMERKIN ULKOASUA PITÄÄ VIELÄ MUOKATA. TASAUKSET EIVÄT TOIMI JA LISÄKSI YHTÄLÖPARIN ALLE PITÄISI SUMMAUKSEN KOHDALLA SAADA VIIVA. SAMA ONGELMA MYÖHEMMISSÄ ESIMERKEISSÄ.
 
-On mahdollista, että yhtälöryhmällä ei ole lainkaan ratkaisuja.
+Aiemmin on todettu, että normaalimuotoinen ensimmäisen asteen yhtälö voidaan tulkita suorana
+$xy$-tasossa. Näin ollen lineaariselle yhtälöparille on geometrinen tulkinta: sen
+ratkaisut ovat ne tason pisteet, joissa yhtälöitä vastaavat
+suorat leikkaavat. Näitä voi olla
+$0$ (suorat ovat yhdensuuntaiset, mutta eivät sama suora),
+$1$ (suorat eivät ole yhdensuuntaiset) tai
+äärettömän monta (suorat ovat sama suora).
+
+\laatikko{Yhtälöparilla on 0, 1 tai äärettömän monta ratkaisua.}
+
+Tarkastellaan esimerkkiä yhtälöryhmästä, jolla ei ole lainkaan ratkaisuja.
 
 \begin{esimerkki}
 Ratkaise yhtälöpari
@@ -160,10 +179,23 @@ Yhtälöparilla ei ole ratkaisua.
 \end{esimerkki}
 
 Edellisessä esimerkissä yhtälöryhmällä ei ollut lainkaan ratkaisuja. Geometrisesti tämä tarkoittaa sitä, että suorilla $x-2y= 1$ ja $5x-10y= 2$ ei ole leikkauspisteitä. Ne ovat siis yhdensuuntaiset.
+Tämä voi nähdä myös kirjoittamalla suorien yhtälöt muodossa
+\begin{align*}
+  x-2y &= 1 \\
+  2y &= x - 1 \\
+  y &= \frac{1}{2}x -1
+\end{align*}
+ja
+\begin{align*}
+  5x-10y &= 2 \\
+  10y &= 5x -2 \\
+  y &= \frac{1}{2}x - \frac{1}{5},
+\end{align*}
+josta nähdään että suorien kulmakertoimet ovat samat.
 
 TÄHÄN KUVA?
 
-Joillakin yhtälöpareilla on äärettömän monta ratkaisua.
+Tutkitaan vielä yhtälöparia, jolla on äärettömän monta ratkaisua.
 
 \begin{esimerkki}
 Ratkaise yhtälöpari
@@ -194,22 +226,11 @@ Ratkaisuja on äärettömän monta.
 
 Edellisessä esimerkissä yhtälöparilla oli äärettömän monta ratkaisua. Geometrisesti tämä tarkoittaa sitä, että yhtälöt $-3x+y= -1$ ja $6x-2y= 2$ ovat saman suoran yhtälö. Siten kaikki suoralla $-3x+y= -1$ (tai yhtä hyvin suoralla $6x-2y= 2$) olevat pisteet toteuttavat yhtälöparin.
 
-% Aiemmin on todettu, että normaalimuotoinen ensimmäisen asteen yhtälö voidaan tulkita suorana
-% $xy$-tasossa. Näin ollen lineaariselle yhtälöparille on geometrinen tulkinta: sen
-% ratkaisut ovat ne tason pisteet, joissa yhtälöitä vastaavat
-% suorat leikkaavat. Näitä voi olla
-% $0$ (suorat ovat yhdensuuntaiset, mutta eivät sama suora),
-% $1$ (suorat eivät ole yhdensuuntaiset) tai
-% äärettömän monta (suorat ovat sama suora).
-% 
-% Lineaarisia yhtälöpareja ratkotaan pääasiallisesti kahdella menetelmällä.
-% Nämä menetelmät ovat \termi{sijoitusmenetelmä}{sijoitusmenetelmä} ja
-% \termi{yhteenlaskumenetelmä}{yhteenlaskumenetelmä}.
 
 
-\subsection*{Lineaarinen yhtälöryhmä}
+\subsection*{Useamman kuin kahden yhtälön yhtälöryhmät}
 
-Ratkaistavia yhtälöitä voi olla useampia kuin kaksi, ja tällöin puhutaan \termi{yhtälöryhmä}{yhtälöryhmästä}.
+Ratkaistavia yhtälöitä voi olla useampia kuin kaksi, ja tällöin puhutaan \termi{yhtälöryhmä}{yhtälöryhmästä}. Yhtälöpari on yhtälöryhmän erikoistapaus. \footnote{Joskus myös yhtälöparia kutsutaan yhtälöryhmäksi.}
 
 Jos yhtälöt ovat lisäksi ensimmäistä astetta, on kyseessä \termi{lineaarinen yhtälöryhmä}{lineaarinen yhtälöryhmä}.
 Esimerkiksi
@@ -222,12 +243,15 @@ Esimerkiksi
 \end{aligned}
 \right.
 \]
-on lineaarinen yhtälöryhmä. Yhtälöpari on yhtälöryhmän erikoistapaus.
+on lineaarinen yhtälöryhmä. 
 
-% Tässä tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Neljän yhtälön
-% lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. Yleisesti ottaen yhtälöryhmiä
-% ei ratkaista tällä kurssilla esitetyin keinoin, vaan likimääräisesti tietokoneella käyttäen numeerista 
-% matriisilaskentaa, joka ei kuulu lukion oppimäärään.
+Tässä tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Tätä useamman yhtälön
+lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. 
+
+Ylipäätään muuttujien ja yhtälöiden voi vaihdella. Tähän asti esimerkeissä on käsitelty yhtälöryhmiä, joissa muuttujia on ollut yhtä monta kuin yhtälöitä, mutta yhtälöitä ja muuttujia voi olla myös eri määrä, mikä vaikuttaa yhtälöryhmän mahdollisten ratkaisujen lukumäärään.
+
+Yleisesti ottaen yhtälöryhmiä ei käytännössä ratkaista tällä kurssilla esitetyin keinoin. Useimmiten yhtälöryhmiä ratkaistaan likimääräisesti tietokoneella käyttäen numeerista matriisilaskentaa.
+%LISÄMATERIAALEIHIN MAININTA, ESITTELY? Soveltava kurssi, Vapaa Matikka MaaN.N.: Lukion lineaarialgebraa?
 
 
 \begin{esimerkki}
