@@ -17,7 +17,7 @@ KIITOS!}
 Kursseilla MAA1 ja MAA2 on tutustuttu ensimmäisen 
 \[ax +b = 0\]
 ja toisen asteen yhtälöihin
-\[ax^2 + bx +c = 0\],
+\[ax^2 + bx +c = 0,\]
 jotka molemmat ovat yhden muuttujan ($x$) yhtälöitä.
 
 Edellä olemme käsitelleet suoran yhtälöä
@@ -27,12 +27,15 @@ joka on kahden muuttujan, $x$:n ja $y$:n, yhtälö, jonka termit ovat ensimmäis
 Yleisesti tällaisiä yhtälöitä, joissa termit eivät ole ensimmäistä astetta suurempia kutsutaan \termi{lineaarinen yhtälö}{lineaariksi yhtälöiksi}.
 
 \laatikko{
-  \termi{lineaarinen yhtälö}{Lineaarisessa yhtälössä} kukin termi on korkeintaan korkeintaan ensimmäistä astetta. Esimerkiksi
-  \[ax + b = 0,\]
-  \[ax + bx + c = 0\]
-  ja
-  \[ax + by + cz + d = 0\]
-  ovat lineaarisia yhtälöitä.
+  \termi{lineaarinen yhtälö}{Lineaarisessa yhtälössä} kukin termi on korkeintaan korkeintaan ensimmäistä astetta. 
+  \begin{samepage}
+    Esimerkiksi
+    \[ax + b = 0,\]
+    \[ax + bx + c = 0\]
+    ja
+    \[ax + by + cz + d = 0\]
+    ovat lineaarisia yhtälöitä.
+  \end{samepage}
 }
 
 \subsection*{Yhtälöryhmä}
@@ -93,6 +96,7 @@ Kahden muuttujan lineaarisen yhtälöparin ratkaisu on lukupari $(x, y)$, joka t
 Lineaarisia yhtälöpareja ratkotaan lukiomatematiikassa pääasiallisesti kahdella menetelmällä.
 Nämä menetelmät ovat \termi{sijoitusmenetelmä}{sijoitusmenetelmä} ja
 \termi{yhteenlaskumenetelmä}{yhteenlaskumenetelmä}.
+
 \begin{esimerkki}
 Ratkaise yhtälöpari
 \[
@@ -541,6 +545,7 @@ Yhtälöryhmän ratkaisu on $x=3$, $y=-1$, $z=-2$.
 	\end{vastaus}
 \end{tehtava}
 
+
 \begin{tehtava}
 	Ratkaise yhtälöryhmä.
 	\begin{align*}
@@ -565,6 +570,25 @@ Yhtälöryhmän ratkaisu on $x=3$, $y=-1$, $z=-2$.
 		$x = y = z = \frac{1}{t+2}$, kun $1 \neq t \neq -2$. Kun $t = -2$ yhtälöryhmällä ei ole ratkaisuja.
 		Kun $t = 1$ kaikki kolmikot muotoa $x = r$, $y = s$ ja $z = 1-r-s$, jollain reaaliluvuilla $r$ ja $s$ ovat ratkaisuja.
 	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+  Yhden muuttujan lineaarinen yhtälö $ax +b = 0$ määrittää pisteen ($x = \frac{-b}{a}$) lukusuoralla.
+  Kahden muuttujan lineaarinen yhtälö puolestaan $ax +by +c = 0$ määrittää kaksiulotteisessa tasossa suoran eli pistejoukon $(x,y) = (x, \frac{-a}{b}x - \frac{c}{b})$.
+  Kolmen muuttujan avulla voidaan määrittää kolmiulotteisen \emph{avaruuden} piste $(x, y, z)$.
+  Tutki, minkä pistejoukon kolmen muuttujan lineaarinen yhtälö määrittää, toisin sanoen, mitkä kolmiulotteisen avaruuden pisteet $(x, y, z)$ toteuttavat yhtälön $ax +by +cz +d = 0$
+  \begin{alakohdat}
+    \alakohta{kun $a = 1, b = 0, c= 0, d=0$?}
+    \alakohta{kun $a = 1, b = 1, c= 0, d=1$?}
+    \alakohta{kun $a, b, c$ ja $d$ ovat kaikki erisuuria kuin nolla?}
+  \end{alakohdat}
+  \begin{vastaus}
+    \begin{alakohdat}
+      \alakohta{Saadaan yhtälö  $x = 0$ ja siten pistejoukko $(0, y, z)$ ($y$ ja $z$-koordinaattia ei rajoiteta mitenkään, ne voivat olla mitä tahansa reaalilukuja), joka on kolmiulotteisessa $xyz$-avaruudessa $y$- ja $z$-akselien suuntainen taso. }
+      \alakohta{$x + y +1 = 0$ ja $ (x, -x -1, z)$. Yhtälö määrää $xy$-tasossa suoran $y = -x-1$, ja $z$ voi olla mikä tahansa reaaliluku. Saadaan siis $z$-akselin suuntainen taso, joka kulkee $xy$-tason suoran $y = -x-1$ kautta.}
+      \alakohta{Kukin muuttuja voidaan kirjoittaa kahden muun avulla, esim. $ z= -\frac{(ax + by + d)}{c}$, jolloin saadaan pistejoukko $(x, y, -\frac{(ax + by + d)}{c})$. Siis kun valitaan mitkä tahansa $x$- ja $y$-koordinaatit, $z$-koordinaatti on määrätty. Yhtälö määrittää edelleen tason.}
+    \end{alakohdat}
+  \end{vastaus}
 \end{tehtava}
 
 \subsubsection*{Sekalaisia tehtäviä}
