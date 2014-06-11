@@ -1,4 +1,4 @@
-\section{Lineaariset yhtälöryhmät} % FIXME: siirrä?
+\section{Lineaariset yhtälöryhmät} 
 
 \laatikko{
 KIRJOITA TÄHÄN LUKUUN
@@ -12,18 +12,52 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
+\subsection*{Johdanto: Lineaarinen yhtälö}
+
+Kursseilla MAA1 ja MAA2 on tutustuttu ensimmäisen 
+\[ax +b = 0\]
+ja toisen asteen yhtälöihin
+\[ax^2 + bx +c = 0\],
+jotka molemmat ovat yhden muuttujan ($x$) yhtälöitä.
+
+Edellä olemme käsitelleet suoran yhtälöä
+\[ax + by + c = 0,\]
+joka on kahden muuttujan, $x$:n ja $y$:n, yhtälö, jonka termit ovat ensimmäistä astetta tai vakioita.
+
+Yleisesti tällaisiä yhtälöitä, joissa termit eivät ole ensimmäistä astetta suurempia kutsutaan \termi{lineaarinen yhtälö}{lineaariksi yhtälöiksi}.
+
+\laatikko{
+  \termi{lineaarinen yhtälö}{Lineaarisessa yhtälössä} kukin termi on korkeintaan korkeintaan ensimmäistä astetta. Esimerkiksi
+  \[ax + b = 0,\]
+  \[ax + bx + c = 0\]
+  ja
+  \[ax + by + cz + d = 0\]
+  ovat lineaarisia yhtälöitä.
+}
+
 \subsection*{Yhtälöryhmä}
 
 \termi{yhtälöryhmä}{Yhtälöryhmällä} tarkoitetaan useaa yhtälöä, joiden täytyy
-päteä samanaikaisesti. 
-\footnote{Englannin kielessä yhtälöryhmästä käytetäänkin usein nimeä 
+päteä samanaikaisesti. \footnote{Englannin kielessä yhtälöryhmästä käytetäänkin usein nimeä 
   \emph{simultaneous equations} eli samanaikaiset yhtälöt.
   Termi \emph{system of equations} on tosin vähintäänkin yhtä yleinen.}
 Yhtälöryhmän ratkaisujen tulee siis toteuttaa kaikki ryhmän yhtälöt; ratkaisuja ei välttämättä ole.
 
-Tässä luvussa käsitellään yhtälöryhmiä, joissa kaikki yhtälöt ovat ensimmäistä
-astetta eli \emph{lineaarisia yhtälöitä}. 
-Tällaisia yhtälöryhmiä kutsutaankin \termi{lineaarinen yhtälöryhmä}{lineaarisiksi yhtälöryhmiksi}.
+Tässä luvussa käsitellään yhtälöryhmiä, joissa kaikki yhtälöt ovat \emph{lineaarisia}. 
+Tällaisia yhtälöryhmiä kutsutaan \termi{lineaarinen yhtälöryhmä}{lineaarisiksi yhtälöryhmiksi}.
+
+Esimerkiksi
+\[
+\left\{
+\begin{aligned}
+3x-2y-z&= -5 \\
+5x+6y+5z&= 1 \\
+-x+5y&= 0.
+\end{aligned}
+\right.
+\]
+on lineaarinen yhtälöryhmä. 
+
 %Lisäksi myöhemmin kirjassa käsitellään muutamia erikoistapauksia toisen asteen yhtälöryhmistä
 %ratkaistaessa kahden ympyrän tai ympyrän ja suoran leikkauspisteitä.
 % re ^:
@@ -35,11 +69,14 @@ Tällaisia yhtälöryhmiä kutsutaankin \termi{lineaarinen yhtälöryhmä}{linea
 
 Yksinkertaisin mielenkiintoinen yhtälöryhmä on
 \termi{lineaarinen yhtälöpari}{lineaarinen yhtälöpari}.
-Lineaarisessa yhtälöparissa on kaksi ensimmäisen asteen yhtälöä.
+Lineaarisessa yhtälöparissa on kaksi ensimmäistä astetta olevaa yhtälöä.
+Tällä kurssilla yhtälöparilla tarkoitetaan useimmiten kahden muuttujan lineaarista yhtälöparia.
+
 Lineaarinen yhtälöpari voidaan esittää monella tapaa. Tässä
-kirjassa käytämme pääasiallisesti muotoa, jossa kumpikin yhtälö on \termi{suoran normaalimuotoinen yhtälö}{normaalimuodossa}.
+kirjassa käytämme pääasiallisesti muotoa, jossa kumpikin yhtälö on normaalimuodossa.
 
 \laatikko[Kahden muuttujan yhtälöparin normaalimuoto]{
+\begin{samepage}
   \[
     \left\{
       \begin{aligned}
@@ -48,9 +85,10 @@ kirjassa käytämme pääasiallisesti muotoa, jossa kumpikin yhtälö on \termi{
       \end{aligned}
     \right.
   \]
-missä $a_1, a_2, b_1, b_2, c_1, c_2 \in \rr$}
+missä $a_1, a_2, b_1, b_2, c_1, c_2 \in \rr$
+\end{samepage}}
 
-Lineaarisen yhtälöparin ratkaisu on lukupari $(x, y)$, joka toteuttaa molemmat yhtälöt.
+Kahden muuttujan lineaarisen yhtälöparin ratkaisu on lukupari $(x, y)$, joka toteuttaa molemmat yhtälöt.
 
 Lineaarisia yhtälöpareja ratkotaan lukiomatematiikassa pääasiallisesti kahdella menetelmällä.
 Nämä menetelmät ovat \termi{sijoitusmenetelmä}{sijoitusmenetelmä} ja
@@ -131,6 +169,8 @@ Yhtälön ratkaisu on $x=7$, $y=10$.
 \end{esimerkki}
 
 %EDELLISEN ESIMERKIN ULKOASUA PITÄÄ VIELÄ MUOKATA. TASAUKSET EIVÄT TOIMI JA LISÄKSI YHTÄLÖPARIN ALLE PITÄISI SUMMAUKSEN KOHDALLA SAADA VIIVA. SAMA ONGELMA MYÖHEMMISSÄ ESIMERKEISSÄ.
+
+\subsection{Yhtälöparin ratkaisujen määrä ja geometrinen tulkinta}
 
 Aiemmin on todettu, että normaalimuotoinen ensimmäisen asteen yhtälö voidaan tulkita suorana
 $xy$-tasossa. Näin ollen lineaariselle yhtälöparille on geometrinen tulkinta: sen
@@ -230,25 +270,12 @@ Edellisessä esimerkissä yhtälöparilla oli äärettömän monta ratkaisua. Ge
 
 \subsection*{Useamman kuin kahden yhtälön yhtälöryhmät}
 
-Ratkaistavia yhtälöitä voi olla useampia kuin kaksi, ja tällöin puhutaan \termi{yhtälöryhmä}{yhtälöryhmästä}. Yhtälöpari on yhtälöryhmän erikoistapaus. \footnote{Joskus myös yhtälöparia kutsutaan yhtälöryhmäksi.}
-
-Jos yhtälöt ovat lisäksi ensimmäistä astetta, on kyseessä \termi{lineaarinen yhtälöryhmä}{lineaarinen yhtälöryhmä}.
-Esimerkiksi
-\[
-\left\{
-\begin{aligned}
-3x-2y-z&= -5 \\
-5x+6y+5z&= 1 \\
--x+5y&= 0.
-\end{aligned}
-\right.
-\]
-on lineaarinen yhtälöryhmä. 
+Kun ratkaistavia yhtälöitä voi olla useampia kuin kaksi, puhutaan yleisesti \termi{yhtälöryhmä}{yhtälöryhmästä}. Yhtälöpari on yhtälöryhmän erikoistapaus. \footnote{Joskus myös yhtälöparia kutsutaan yhtälöryhmäksi, kun ei haluta korostaa yhtlöiden lukumäärää.}
 
 Tässä tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Tätä useamman yhtälön
 lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. 
 
-Ylipäätään muuttujien ja yhtälöiden voi vaihdella. Tähän asti esimerkeissä on käsitelty yhtälöryhmiä, joissa muuttujia on ollut yhtä monta kuin yhtälöitä, mutta yhtälöitä ja muuttujia voi olla myös eri määrä, mikä vaikuttaa yhtälöryhmän mahdollisten ratkaisujen lukumäärään.
+Tähän asti esimerkeissä on käsitelty yhtälöryhmiä, joissa muuttujia on ollut yhtä monta kuin yhtälöitä, mutta yhtälöitä ja muuttujia voi olla myös eri määrä, mikä vaikuttaa yhtälöryhmän mahdollisten ratkaisujen lukumäärään.
 
 Yleisesti ottaen yhtälöryhmiä ei käytännössä ratkaista tällä kurssilla esitetyin keinoin. Useimmiten yhtälöryhmiä ratkaistaan likimääräisesti tietokoneella käyttäen numeerista matriisilaskentaa.
 %LISÄMATERIAALEIHIN MAININTA, ESITTELY? Soveltava kurssi, Vapaa Matikka MaaN.N.: Lukion lineaarialgebraa?
