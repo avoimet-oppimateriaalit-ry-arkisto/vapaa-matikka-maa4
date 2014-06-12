@@ -22,12 +22,12 @@ jotka molemmat ovat yhden muuttujan ($x$) yhtälöitä.
 
 Edellä olemme käsitelleet suoran yhtälöä
 \[ax + by + c = 0,\]
-joka on kahden muuttujan, $x$:n ja $y$:n, yhtälö, jonka termit ovat ensimmäistä astetta tai vakioita.
+joka on kahden muuttujan, $x$:n ja $y$:n, yhtälö, jossa termit ovat ensimmäistä astetta ($ax, by$) tai vakioita ($c$).
 
 Yleisesti tällaisiä yhtälöitä, joissa termit eivät ole ensimmäistä astetta suurempia kutsutaan \termi{lineaarinen yhtälö}{lineaariksi yhtälöiksi}.
 
 \laatikko{
-  \termi{lineaarinen yhtälö}{Lineaarisessa yhtälössä} kukin termi on korkeintaan korkeintaan ensimmäistä astetta. 
+  \termi{lineaarinen yhtälö}{Lineaarisessa yhtälössä} kukin termi on korkeintaan ensimmäistä astetta. 
   \begin{samepage}
     Esimerkiksi
     \[ax + b = 0,\]
@@ -177,12 +177,12 @@ Yhtälön ratkaisu on $x=7$, $y=10$.
 \subsection*{Yhtälöparin ratkaisujen määrä ja geometrinen tulkinta}
 
 Aiemmin on todettu, että normaalimuotoinen ensimmäisen asteen yhtälö voidaan tulkita suorana
-$xy$-tasossa. Näin ollen lineaariselle yhtälöparille on geometrinen tulkinta: sen
-ratkaisut ovat ne tason pisteet, joissa yhtälöitä vastaavat
-suorat leikkaavat. Näitä voi olla
-$0$ (suorat ovat yhdensuuntaiset, mutta eivät sama suora),
-$1$ (suorat eivät ole yhdensuuntaiset) tai
-äärettömän monta (suorat ovat sama suora).
+$xy$-tasossa. Näin ollen lineaariselle yhtälöparille on geometrinen tulkinta: yhtälöparin
+ratkaisut ovat ne tason pisteet, jotka toteuttavat  molempien suorien yhtälöt
+eli ne pisteet, joissa yhtälöitä vastaavat suorat leikkaavat.
+Näitä voi olla $0$ (suorat ovat yhdensuuntaiset, mutta eivät sama suora),
+$1$ (suorat eivät ole yhdensuuntaiset) tai äärettömän monta (suorat ovat sama
+suora).
 
 \laatikko{Yhtälöparilla on 0, 1 tai äärettömän monta ratkaisua.}
 
@@ -279,9 +279,16 @@ Kun ratkaistavia yhtälöitä voi olla useampia kuin kaksi, puhutaan yleisesti \
 Tässä tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Tätä useamman yhtälön
 lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. 
 
-Tähän asti esimerkeissä on käsitelty yhtälöryhmiä, joissa muuttujia on ollut yhtä monta kuin yhtälöitä, mutta yhtälöitä ja muuttujia voi olla myös eri määrä, mikä vaikuttaa yhtälöryhmän mahdollisten ratkaisujen lukumäärään.
+Tähän asti esimerkeissä on käsitelty yhtälöryhmiä, joissa muuttujia on ollut yhtä monta kuin yhtälöitä, mutta yhtälöitä ja muuttujia voi olla myös eri määrä, mikä vaikuttaa yhtälöryhmän mahdollisten ratkaisujen lukumäärään. Niiden välinen yhteys voidaan ilmaista lauseena, jota voi pitää aikaisemman yhtälöparien ratkaisujen määrää koskevan lauseen yleistyksenä:
 
-Yleisesti ottaen yhtälöryhmiä ei käytännössä ratkaista tällä kurssilla esitetyin keinoin. Useimmiten yhtälöryhmiä ratkaistaan likimääräisesti tietokoneella käyttäen numeerista matriisilaskentaa.
+\laatikko{Jos lineaarisessa yhtälöryhmässä on vähemmän tai yhtä paljon muuttujia kuin yhtälöitä,
+  yhtälöryhmällä voi olla 0, 1 tai äärettömän monta ratkaisua.
+
+  Jos muuttujia on enemmän kuin yhtälöitä, ratkaisuja on 0 tai äärettömän monta.
+}
+Tähän ja muihin mielenkiintoisiin lineaaristen yhtälöiden ominaisuuksiin tutustutaan tarkemmin tyypillisesti korkeakoulumatematiikassa lineaarialgebran kurssilla.
+
+Lineaarisilla yhtälöryhmillä on paljon käyttöä soveltavassa matematiikassa. Käytännön sovelluksissa voidaan joutua käsittelemään hyvinkin suuria monen muuttujan yhtälöryhmiä, joten yleisesti ottaen yhtälöryhmiä ei käytännössä ratkaista tällä kurssilla esitetyin keinoin, vaan likimääräisesti tietokoneella käyttäen numeerista matriisilaskentaa.
 %LISÄMATERIAALEIHIN MAININTA, ESITTELY? Soveltava kurssi, Vapaa Matikka MaaN.N.: Lukion lineaarialgebraa?
 
 
@@ -497,6 +504,38 @@ Yhtälöryhmän ratkaisu on $x=3$, $y=-1$, $z=-2$.
 \subsubsection*{Hallitse kokonaisuus}
 
 \begin{tehtava}
+  Esimerkeissä huomasimme, että lineaarisella yhtälöparilla on 0, 1 tai äärettömän monta ratkaisua ja tällä havainnolla oli luonteva geometrinen tulkinta.
+  Perustellaan esittämäämme lausetta lineaarisen yhtälöryhmän muuttujien ja yhtälöiden määrän suhteesta ratkaisujen lukumäärään tutkimalla kahden muuttujan yhtälöryhmän ratkaisujen lukumäärää, kun yhtälöitä on enemmän.
+  \begin{alakohdat}
+    \alakohta{
+      Tutki (esimerkiksi piirtämällä) montako ratkaisua seuraavalla yhtälöryhmällä on:
+      \[
+        \left\{
+          \begin{aligned}
+            a_1x+b_1y+c_1 &= 0 \\
+            a_2x+b_2y+c_2 &= 0 \\
+            a_3x+b_3y+c_3 &= 0
+          \end{aligned}
+        \right.
+      \]
+      \emph{Vihje.} Monellako tavalla kolme suoraa voi leikata toisensa tasossa?
+    }
+    \alakohta{Entä jos yhtälöryhmään lisätään neljäs tai useampi suora?}
+    \alakohta{Milloin kahden muuttujan lineaarisessa yhtälöryhmässä on enemmän muuttujia kuin yhtälöitä? Montako ratkaisua tällöin on?} 
+  \end{alakohdat}
+  \begin{vastaus}
+    \begin{alakohdat}
+      \alakohta{Kolme tason suoraa voivat olla keskenään yhdensuuntaisia leikkaamatta toisiaan (0 ratkaisua), leikata kaikki toisensa samassa pisteessä (1 ratkaisu) tai olla saman suoran yhtälöitä(äärettömän monta ratkaisua). Suorat voivat myös leikata toisiaan siten, että kolmesta suorasta kaksi leikkaavat toisensa jossain pisteessä, jonka kautta kolmas suora ei kuitenkaan kulje. Tällöin ratkaisuja on myös 0 (piirrä kuva.)
+
+        Ratkaisuja on 0, 1 tai äärettömän paljon.
+      }
+      \alakohta{Sama kuin yllä pätee kun suoria lisätään.}
+      \alakohta{'Yhtälöryhmässä' on tällöin vain yksi suoran yhtälö.}
+    \end{alakohdat}
+  \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
     Ratkaise yhtälöryhmä.
     \begin{align*}
         x+y+z+8 &= 0 \\
@@ -571,6 +610,7 @@ Yhtälöryhmän ratkaisu on $x=3$, $y=-1$, $z=-2$.
 		Kun $t = 1$ kaikki kolmikot muotoa $x = r$, $y = s$ ja $z = 1-r-s$, jollain reaaliluvuilla $r$ ja $s$ ovat ratkaisuja.
 	\end{vastaus}
 \end{tehtava}
+
 
 \begin{tehtava}
   Yhden muuttujan lineaarinen yhtälö $ax +b = 0$ määrittää pisteen ($x = \frac{-b}{a}$) lukusuoralla.
