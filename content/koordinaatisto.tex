@@ -40,8 +40,7 @@ Aivan kuten lukusuoralla kutakin pistettä vastaa tietty reaaliluku $x$ ja päin
 
 Geometriassa tärkeää on päästä mittaamaan pituuksia.
 Tätä varten on selvitettävä, miten voidaan määrittää kahden koordinaatiston pisteen välinen etäisyys.
-Aivan kuten tavallisessa geometriassa, emme voi aina turvautua mittaamiseen, sillä siten ei saada täsmällisiä tuloksia.
-Sen sijaan pyritään selvittämään pisteiden väliset etäisyydet niiden koordinaattien perusteella.
+Aivan kuten tavallisessa geometriassa, emme voi aina turvautua mittaamiseen; se ei vain yksinkertaisesti aina onnistu. Esim. maan ja auringon etäisyyden määrittämiseen ei pisinkään viivoitin riitä, ja betonikuution lävistäjän pituuden mittaamiseski ei voi suoraan käyttää mittanauhaa. Sen sijaan pyritään selvittämään pisteiden väliset etäisyydet niiden koordinaattien perusteella.
 
 \begin{kuva}
     kuvaaja.pohja(-4, 3, 0, 6, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
@@ -57,7 +56,7 @@ Tällöin niiden etäisyys saadaan yksinkertaisesti laskemalla toisistaan poikke
 Esimerkiksi yllä olevassa kuvassa pisteiden $A(1, 2)$ ja $B(1, 5)$ välinen etäisyys on $5-2=3$.
 Toisaalta pisteiden $A(1, 2)$ ja $C(-3, 2)$ välinen etäisyys on $1-(-3)=4$.
 
-Etäisyyden tulee olla aina positiivinen.
+Etäisyyden tulee olla aina epänegatiivinen.
 Jos ei ole varma pisteiden järjestyksestä, voi käyttää itseisarvoja.
 Esimerkiksi edellä pisteiden $A$ ja $C$ etäisyys voidaan laskea myös järjestyksessä $|-3-1|=|-4|=4$.
 
@@ -181,6 +180,61 @@ Esimerkiksi piste $(3/2, 3/2)$ on käyrällä, sillä
 \begin{tehtavasivu}
 
 \subsubsection*{Opi perusteet}
+
+\begin{tehtava}
+	Määritä pisteiden etäisyys, kun pisteet ovat
+	\alakohdat{
+		§ $(1,2)$ ja $(1,5)$
+		§ $(17,55)$ ja $(17,-1876)$
+		§ $(-999999,423)$ ja $(999999,423)$.
+	}
+	\begin{vastaus}
+		\alakohdat{
+			§ $3$
+			§ $1931$
+			§ $1999998$
+		}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Määritä pisteiden etäisyys, kun pisteet ovat
+	\alakohdat{
+		§ $(1,2)$ ja $(2,5)$
+		§ $(8,5)$ ja $(17,0)$
+		§ $(-12,34)$ ja $(56,-78)$.
+	}
+	\begin{vastaus}
+		\alakohdat{
+			§ $\sqrt{10}$
+			§ $\sqrt{106}$
+			§ $\sqrt{17168} = 4 \sqrt{1073}$
+		}
+	\end{vastaus}
+	\end{tehtava}
+	
+\begin{tehtava}
+	Laske kolmion $ABC$ piiri, kun sen kärjet ovat pisteet $A = (1,1)$, $B = (2,7)$ ja $C = (-4,-1)$.
+	\begin{vastaus}
+		$\sqrt{65}+10+\sqrt{29}$
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Millä $t$:n arvoilla pisteiden $(1,t)$ ja $(-2t,3)$ etäisyys on
+	\alakohdat{
+		§ $\sqrt{10}$
+		§ $4$
+		§ $3t$
+	}
+	\begin{vastaus}
+		\alakohdat{
+			§ $t = 0$ tai $t = \frac{2}{5}$
+			§ $t = \frac{1 \pm \sqrt{31}}{5}$
+			§ $t = \frac{-1 \pm \sqrt{41}}{4}$
+		}
+	\end{vastaus}
+\end{tehtava}
 
 \subsubsection*{Hallitse kokonaisuus}
 
